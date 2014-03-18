@@ -1,0 +1,29 @@
+{
+  "name": "web",
+  "version": "0.0.0",
+  "authors": [
+    "Ganesh <ganesh@quintessentially.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "twbs/bootstrap-sass#~3.1.1",
+    "backbone": "~1.1.2",
+    "lodash": "~2.4.1",
+    "jquery": "~2.1.0",
+    "backbone-forms": "~0.14.0",
+    "requirejs": "~2.1.11",
+    "requirejs-text": "~2.0.10",
+    "mustache": "~0.8.1",
+    "fontawesome": "~4.0.3",
+    "requirejs-plugins": "~1.0.2"
+  }
+}
