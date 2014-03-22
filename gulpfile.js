@@ -26,8 +26,7 @@ gulp.task('style', function(){
 	return gulp.src(source.sass)
 		.pipe(plumber())
 		.pipe(sass({
-			outputStyle: 'expanded',
-			includesource: ['public/components']
+			outputStyle: 'expanded'
 		}))
 		.pipe(prefix("last 3 version"))
 		.pipe(gulp.dest(dest.css))
@@ -51,7 +50,7 @@ gulp.task('cafe', function() {
 	return gulp.src(source.coffee)
 				.pipe(plumber())
 				.pipe(coffeelint())
-				.pipe(coffee({ sourceMap: true }))
+				.pipe(coffee({ sourceMap: true, sourceRoot: '../coffee' }))
 				.pipe(gulp.dest(dest.js));
 });
 
