@@ -6,6 +6,10 @@
   <title>{{title}}</title>
 </head>
 <body>
-  {{{content}}}
+  <div class="container room">
+    {{{content}}}
+  </div>
+
+  <script data-main="/js/main" src="/components/requirejs/require.js"></script>
 </body>
 </html>

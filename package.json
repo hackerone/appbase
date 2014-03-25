@@ -24,6 +24,11 @@
     "gulp-plumber": "~0.5.6",
     "gulp-watch": "~0.5.2",
     "gulp-coffeelint": "~0.3.1",
-    "require-fu": "~1.0.0"
+    "require-fu": "~1.0.0",
+    "gulp-define-module": "~0.1.0",
+    "gulp-handlebars": "~2.0.0",
+    "gulp-concat": "~2.2.0",
+    "gulp-declare": "~0.2.0",
+    "gulp-hogan-compile": "git://github.com/hackerone/gulp-hogan-compile"
   }
 }

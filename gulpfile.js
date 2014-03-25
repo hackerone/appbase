@@ -9,12 +9,14 @@ var gulp = require('gulp'),
 	coffee = require('gulp-coffee'),
 	coffeelint = require('gulp-coffeelint'),
 	plumber = require('gulp-plumber'),
-	watch = require('gulp-watch');
+	watch = require('gulp-watch'),
+	hogan = require('gulp-hogan-compile');
 
 var source = {
 	sass: ['public/sass/**/*.scss'],
 	js: ['public/js/**/*.js'],
 	coffee: ['public/coffee/**/*.coffee'],
+	template: ['public/template/**/*.html']
 };
 
 var dest = {
@@ -54,6 +56,13 @@ gulp.task('cafe', function() {
 				.pipe(gulp.dest(dest.js));
 });
 
+gulp.task('template', function() {
+	return gulp.src(source.template)
+						.pipe(plumber())
+						.pipe(hogan('tmpl.js'))
+						.pipe(gulp.dest(dest.js));
+});
+
 gulp.task('dev', function () {
 	nodemon({
 		script: 'server.coffee', ext: 'hjs js coffee', ignore: ['public/*.js', 'coffee/*.coffee']
@@ -64,6 +73,7 @@ gulp.task('dev', function () {
 gulp.task('watch', function () {
   gulp.watch(source.sass, ['style']);
   gulp.watch(source.coffee, ['cafe', 'js']);
+  gulp.watch(source.template, ['template']);
 });
 
-gulp.task('default', ['style', 'cafe', 'js', 'watch', 'dev']);
+gulp.task('default', ['style', 'cafe', 'js', 'template', 'watch', 'dev'])
