@@ -1,0 +1,86 @@
+// stretch element height to specified top and bottom position
+
+@mixin stretch-y($offset-top:0, $offset-bottom:0) {
+  @include stretch($offset-top, false, $offset-bottom, false);
+}
+
+
+// stretch element width to specified left and right position
+
+@mixin stretch-x($offset-left:0, $offset-right:0) {
+  @include stretch(false, $offset-right, false, $offset-left);
+}
+
+
+// shorthand to stretch element height and width
+
+@mixin stretch($offset-top:0, $offset-right:0, $offset-bottom:0, $offset-left:0) {
+  position: absolute;
+  @if $offset-top { top: $offset-top; }
+  @if $offset-bottom { bottom: $offset-bottom; }
+  @if $offset-left { left: $offset-left; }
+  @if $offset-right { right: $offset-right; }
+}
+
+
+
+@mixin link-colors($normal, $hover: false, $active: false, $visited: false, $focus: false) {
+  color: $normal;
+  @if $visited {
+    &:visited {
+      color: $visited; } }
+  @if $focus {
+    &:focus {
+      color: $focus; } }
+  @if $hover {
+    &:hover {
+      color: $hover; } }
+  @if $active {
+    &:active {
+      color: $active; } } }
+
+
+@mixin font-face($font-family, $font-filename, $font-weight : normal, $font-style :normal, $font-stretch : normal) {
+@font-face {
+  font-family: '#{$font-family}';
+
+  src: url('#{$font-filename}.eot');
+
+  src: url('#{$font-filename}.eot?#iefix') format('embedded-opentype'),
+      url('#{$font-filename}.woff') format('woff'),
+      url('#{$font-filename}.ttf') format('truetype'),
+      url('#{$font-filename}.svg##{$font-family}') format('svg');
+  font-weight: $font-weight;
+  font-style: $font-style;
+  font-stretch: $font-stretch;
+}
+}
+
+@mixin horizontal-list($padding : 4px, $direction: left){
+	
+	box-sizing: border-box;
+  overflow: hidden;
+
+	list-style: none;
+	padding: 0; margin: 0;
+
+	>*{
+		float: $direction;
+		padding:{
+			left: $padding;
+			right: $padding;
+		}
+
+		&:first-child, &.first{
+			padding-#{$direction}: 0;
+		}
+
+		@if $direction == left {
+			$opp : right;
+		} @else {
+			$opp : left;
+		}
+
+		
+	}
+}

@@ -1,4 +1,7 @@
 require.config
+  shim:
+    "skrollr":
+      "exports" : "skrollr"
   paths:
     "jquery" : "/components/jquery/dist/jquery",
     "backbone" : "/components/backbone/backbone",
@@ -7,9 +10,8 @@ require.config
     "backbone-forms": "/components/backbone-forms/distribution.amd/templates/bootstrap3",
     "text" : "/components/requirejs-text/text",
     "handlebars" : "/components/handlebars/handlebars.runtime.amd.min",
-    "hogan": "/components/hogan/web/builds/2.0.0/hogan-2.0.0.amd",
-    "tmpl": "./tmpl"
+    "hogan": "/components/hogan/web/builds/2.0.0/hogan-2.0.0.amd"
+    "skrollr": "/components/skrollr/src/skrollr"
 
-require ["backbone", "game"], (Backbone, Game) ->
-  game = new Game()
-  Backbone.history.start({pushState: true})
+require ["skrollr"], (skrollr) ->
+  skrollr.init()

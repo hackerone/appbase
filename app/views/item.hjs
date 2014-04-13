@@ -1,0 +1,8 @@
+<div class="item">
+  <a href="#"><img src="/img/small-img.jpg" class="item-thumb"></a>
+  <a href="#" class="offers">92 Offers</a>
+  <ul class="activity-list">
+      <li><a href="">Boating</a></li>
+    </ul>
+  <a href="#" class="info"><i class="icon-info"></i></a>
+</div>

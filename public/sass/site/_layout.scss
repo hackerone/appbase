@@ -1,0 +1,59 @@
+html,body{
+  overflow-y: hidden;
+}
+
+body{
+  margin-top: $navbar-height;
+}
+
+.list-wrap{
+  .list-heading{
+    @extend .row;
+    h3{
+      @extend .col-sm-6;
+      display: block;
+      margin:{
+        top: 25px;
+        bottom: 25px;
+      }
+      padding: {
+        top: 0;
+        bottom: 0;
+      }
+    }
+    .all-link{
+      display: block;
+      margin: {
+        top: 25px;
+        bottom: 25px;
+      }
+      i{
+        line-height: 0.8;
+        font-size: 0.8em;
+      }
+      @extend .col-sm-6;
+      text-align: right;
+      text-transform: uppercase;
+    }
+  }
+  .list{
+    @extend .row;
+    .item{
+      @extend .col-md-4;
+      @extend .col-sm-4;
+      &.featured{
+        @extend .col-md-6;
+        @extend .col-sm-6;
+      }
+    }
+  }
+}
+
+.grey-bg{
+  background: $grey;
+}
+
+.app{
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}

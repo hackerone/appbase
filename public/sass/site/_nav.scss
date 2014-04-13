@@ -1,0 +1,28 @@
+.navbar{
+  line-height: $navbar-height;
+  background: white;
+  a i{
+    font-size: 0.8em;
+  }
+
+  i:hover{
+    text-decoration: none;
+
+  }
+  .logo{
+    font-size: 40px;
+    line-height: 0.8;
+    display: inline-block;
+    i{
+      display: block;
+    }
+  }
+  input[type=text]{
+    line-height: $navbar-height - 14px;
+    margin: 7px;
+    border: 0;
+    background: $grey;
+    padding: 0 7px;
+    box-shadow: 0 2px 0px 0px darken($grey, 5%) inset;
+  }
+}

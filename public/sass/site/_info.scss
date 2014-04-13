@@ -1,0 +1,32 @@
+.info-wrap{
+  @extend .row;
+  margin:{
+    top : 60px;
+    bottom: 60px;
+  }
+  .info-box{
+    @extend .col-sm-4;
+    position: relative;
+    overflow: hidden;
+
+    &:before{
+      content: " ";
+      position: absolute;
+      right: 0;
+      top: 0;
+      left: $grid-gutter-width / 2;
+      z-index: 1;
+      width: 0; 
+      height: 0;
+    }
+    .text{
+      padding: 10px;
+    }
+    p{
+      font-weight: 300;
+    }
+    .info-thumb{
+      width: 100%;
+    }
+  }
+}

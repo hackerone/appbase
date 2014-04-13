@@ -1,1 +1,198 @@
-hello
+ <div class="header" id="header">
+
+  <div class="parallax-wrap">
+    <img src="/img/header.jpg" alt="" class="parallax-img" data-60-top="transform: translate3d(0, 0%, 0)" data-top-bottom="transform: translate3d(0, 20%, 0)" data-anchor-target="#header">
+  </div>
+
+  <div class="container">
+    <div class="banner-wrap">
+      <div class="banner-content">
+        <div class="banner-text">
+          <div class="logo logo-large"><i class="icon-font icon-logo"></i></div>
+          <div class="tag-line">What you <b>sea</b> is what you get</div>
+          <p>An all inclusive yacht + skipper service made easier.
+            <br>Simple, fun. Clear. Jump on board!</p>
+            <br>
+          <a href="#find-more" class="find-more">Find out more</a>
+        </div>
+      </div>
+      <!-- banner-content -->
+      <div class="search-box">
+        <h3>Find your sea experience! <i class="icon-arrow-down pull-right"></i></h3>
+        <form action="" class="form">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Country">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="City">
+          </div>
+          <div class="form-group inline">
+            <input type="text" class="form-control" placeholder="In">
+            <input type="text" class="form-control" placeholder="Out">
+            <input type="text" class="form-control" placeholder="Guests">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Primary Activity">
+          </div>
+          <div class="control-group">
+            <button class="btn-search">Search</button>
+          </div>
+        </form>
+      </div>
+      <!-- search-box -->
+    </div>
+    <!-- banner-wrap -->
+    <div class="banner-meta">
+      <div class="arrows">
+        <a href="" class="btn btn-primary"><i class="icon-font icon-arrow-left"></i></a>
+        <a href="" class="btn btn-primary"><i class="icon-font icon-arrow-right"></i></a>
+      </div>
+
+      <div class="slider-control"></div>
+
+      <div class="place-info">
+        <div class="place-text">
+          Catamaran in the Caribbeans
+          <div class="location">San Barth, French Antilles <i class="icon-location"></i></div>
+        </div>
+        <div class="place-boat">
+          <a href="#location" class="btn btn-primary"><i class="icon-motorboat"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- banner-meta -->
+  </div>
+  <!-- container -->
+</div>
+<!-- header -->
+
+  <div class="grey-bg listings">
+
+    <div class="center-link">
+      <a href="#">
+        Browse
+        <i class="icon-arrow-down"></i>
+      </a>
+    </div>
+    <div class="container app">
+      <div class="list-wrap">
+        <div class="list-heading">
+          <h3>Top Activities</h3>
+          <a href="#all-activities" class="all-link">See All <i class="icon-arrow-right"></i></a>
+        </div>
+
+        <div class="list">
+          {{#items}}
+          <div class="item">
+            <a href="#item"><img src="/img/small-img.jpg" class="item-thumb"></a>
+            <ul class="meta-info">
+              <li><a href="#offers" class="offers">92 offers</a></li>
+              <li><a href="#locations" class="offers">22 locations</a></li>
+            </ul>
+            
+            <ul class="activity-list">
+              <li><a href="">Boating</a></li>
+              <li class="pull-right"><a href="#" class="info"><i class="icon-info"></i></a></li>
+            </ul>
+            
+          </div>
+          {{/items}}
+        </div>
+      </div>
+
+      <div class="list-wrap">
+        <div class="list-heading">
+          <h3>Featured experiences</h3>
+          <a href="#all-exp" class="all-link">See All <i class="icon-arrow-right"></i></a>
+        </div>
+        <div class="list">
+          {{#featured}}
+          <div class="item featured">
+            <div class="thumb-wrap">
+              <a href="#item"><img src="/img/big-img.jpg" class="item-thumb"></a>
+              <div class="skipper-info">
+                <a href="#marco">
+                  <img src="" alt="" class="skipper-img verified">
+                  Marco
+                  <span class="verified">Verified Skipper</span>
+                </a>
+              </div>
+              <a href="" class="fav-item"><span class="i icon icon-fav"></span></a>
+              <div class="name-box">
+                <i class="icon icon-boat"></i>
+                <span class="name">Big game fishing in paradise</span>
+                <span class="location"><i class="icon-font icon-location"></i> Golfo di Orosei, Sardina, Italy</span>
+              </div>
+
+            </div>
+            
+            <div class="detail-box">
+              <ul class="activity-list">
+                <li><a href="">Fishing</a></li>
+                <li><a href="">Boating</a></li>
+              </ul>
+
+              <ul class="info-list">
+                <li><i class="icon icon-person"></i>4</li>
+                <li><i class="icon icon-beds"></i>2</li>
+                <li><i class="icon icon-food"></i>Yes</li>
+                <li><i class="icon icon-fuel"></i>No</li>
+                <li><i class="icon icon-anchor"></i>Yes</li>
+                <li><i class="icon icon-length"></i>35</li>
+              </ul>
+
+              <div class="counts">
+                <a href="#marco-comments" class="skipper-comments"><i class="icon icon-comments"></i> 2</a>
+                <div class="price">
+                  <div class="number">$545</div>
+                  <div class="time">per day</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {{/featured}}
+          </div>
+          
+      </div>
+
+      <div class="list-wrap">
+        <div class="list-heading">
+          <h3>Our locations</h3>
+          <a href="#all-locations" class="all-link">See All <i class="icon-arrow-right"></i></a>
+        </div>
+
+        <div class="list">
+          {{#items}}
+          <div class="item">
+            <a href="#item"><img src="/img/small-img.jpg" class="item-thumb"></a>
+            <ul class="meta-info">
+              <li><a href="#offers" class="offers">32 offers</a></li>
+            </ul>
+            
+            <ul class="location-list">
+              <li><a href=""><b>Venice</b>, Italy</a></li>
+              <li class="pull-right"><a href="#" class="info"><i class="icon-info"></i></a></li>
+            </ul>
+            
+          </div>
+          {{/items}}
+        </div>
+      </div>
+
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="info-wrap">
+        {{#items}}
+        <div class="info-box">
+          <img src="/img/info.jpg" class="info-thumb">
+          <div class="text">
+            <h3>Antlos Certified</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, consectetur, doloremque explicabo blanditiis pariatur iure dicta inventore sunt.</p>
+          </div>
+        </div>
+        {{/items}}
+      </div>
+    </div>

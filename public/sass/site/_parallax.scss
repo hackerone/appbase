@@ -1,0 +1,14 @@
+.parallax-wrap{
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  text-align: center;
+  overflow: hidden;
+  margin:{
+    left: -450%;
+    right: -450%;
+  }
+  .parallax-img{
+    min-width: 10%;
+    min-height: 100%;
+  }
+}

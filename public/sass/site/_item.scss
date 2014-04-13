@@ -1,0 +1,147 @@
+.item{
+  position: relative;
+  .item-thumb{
+    width: 100%;
+  }
+  .meta-info{
+    position: absolute;
+    top: 10px;
+    right: $grid-gutter-width / 2;
+    list-style: none;
+    text-align: right;
+
+    li{
+      margin-bottom: 5px;
+      a{
+        background: $yellow;
+        padding: 5px 10px;
+        display: inline-block;
+        
+      }
+    }
+  }
+
+  >.activity-list, >.location-list{
+
+    @include horizontal-list(5px);
+    list-style: none;
+    margin: 0; padding: 40px 10px 10px 10px;
+    position: absolute;
+    bottom: 0; left: $grid-gutter-width / 2; right: $grid-gutter-width / 2;
+    color: white;
+    font-weight: 300;
+    font-size: 22px;
+    text-transform: uppercase;
+    background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+    a{
+      color: inherit;
+    }
+  }
+
+  >.location-list{
+    text-transform: none;
+    font-size: 16px;
+    b{
+      font-weight: 500;
+    }
+  }
+
+}
+
+.item.featured{
+  .activity-list{
+    background: none;
+  }
+
+  .thumb-wrap{
+    position: relative;
+  }
+
+  .skipper-info{
+    position: absolute;
+    left: $grid-gutter-width / 2;
+    top: 0;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+    .verified{
+      display: block;
+      color: $yellow;
+      font-size: 0.8em;
+      text-transform: uppercase;
+    }
+    a{
+      color: inherit;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+
+
+  .name-box{
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 50px 10px 10px 10px;
+    color: white;
+    background-image: linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8));
+    span{
+      display: block;
+      font-size: 18px;
+    }
+    .location{
+      font-weight: 300;
+    }
+  }
+
+  .detail-box{
+    background: white;
+    padding: 10px;
+    position: relative;
+    color: $btn-blue;
+
+    .counts{
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+
+      font-size: 22px;
+      .skipper-comments{
+        background: $btn-blue;
+        display: block;
+        padding: 10px;
+        color: white;
+        text-align: center;
+        font-size: 0.8em;
+      }
+      .price{
+        padding: 10px 20px 20px 20px;
+        background: $yellow;
+        text-align: center;
+        color: $blue;
+        .time{
+          color: $btn-blue;
+          font-size: 0.6em;
+          font-weight: 300;
+        }
+      }
+    }
+
+    .info-list{
+      @include horizontal-list(7px, left);
+      i{
+        margin-right: 3px; 
+      }
+    }
+    .activity-list{
+     @include horizontal-list(5px);
+     padding-bottom: 10px;
+     li{
+       text-transform: uppercase;
+      :after{
+        content: ", ";
+      }
+     } 
+    }
+  }
+}
