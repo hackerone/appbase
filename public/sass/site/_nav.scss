@@ -22,7 +22,8 @@
     margin: 7px;
     border: 0;
     background: $grey;
-    padding: 0 7px;
+    padding: 7px;
+    line-height: 1;
     box-shadow: 0 2px 0px 0px darken($grey, 5%) inset;
   }
 }

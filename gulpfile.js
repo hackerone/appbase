@@ -10,18 +10,29 @@ var gulp = require('gulp'),
 	coffeelint = require('gulp-coffeelint'),
 	plumber = require('gulp-plumber'),
 	watch = require('gulp-watch'),
-	hogan = require('gulp-hogan-compile');
+	hogan = require('gulp-hogan-compile'),
+	rjs = require('requirejs'),
+	imgmin = require('gulp-imagemin');
 
 var source = {
 	sass: ['public/sass/**/*.scss'],
 	js: ['public/js/**/*.js'],
 	coffee: ['public/coffee/**/*.coffee'],
-	template: ['public/template/**/*.html']
+	template: ['public/template/**/*.html'],
+	img: ['public/img/**/*.jpg'],
+	fonts: ['public/fonts/**/**']
 };
 
 var dest = {
 	css: 'public/css',
 	js: 'public/js'
+};
+
+var dist = {
+	css: 'dist/css',
+	js: 'dist/js',
+	img: 'dist/img',
+	fonts: 'dist/fonts'
 };
 
 gulp.task('style', function(){
@@ -69,6 +80,40 @@ gulp.task('dev', function () {
 	});
 });
 
+gulp.task('pack', function () {
+	rjs.optimize({
+		dir: "dist/js",
+		baseUrl: "public/js",
+		mainConfigFile: "public/js/main.js",
+		modules: [{
+					name: "main"
+				}]
+	});
+});
+
+gulp.task('images', function () {
+	return gulp.src(source.img)
+		.pipe(imgmin())
+		.pipe(gulp.dest(dist.img));
+});
+
+gulp.task('fonts', function () {
+	return gulp.src(source.fonts)
+		.pipe(gulp.dest(dist.fonts));
+});
+
+gulp.task('csspack', function () {
+	return gulp.src(source.sass)
+		.pipe(plumber())
+		.pipe(sass({
+			outputStyle: 'compressed'
+		}))
+		.pipe(prefix("last 3 version"))
+		.pipe(gulp.dest(dist.css));
+});
+
+
+
 
 gulp.task('watch', function () {
   gulp.watch(source.sass, ['style']);
@@ -76,4 +121,4 @@ gulp.task('watch', function () {
   gulp.watch(source.template, ['template']);
 });
 
-gulp.task('default', ['style', 'cafe', 'js', 'template', 'watch', 'dev'])
+gulp.task('default', ['style', 'cafe', 'js', 'template', 'watch', 'dev']);

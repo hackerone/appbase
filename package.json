@@ -29,6 +29,9 @@
     "gulp-handlebars": "~2.0.0",
     "gulp-concat": "~2.2.0",
     "gulp-declare": "~0.2.0",
-    "gulp-hogan-compile": "git://github.com/hackerone/gulp-hogan-compile"
+    "gulp-hogan-compile": "git://github.com/hackerone/gulp-hogan-compile",
+    "gulp-load-plugins": "~0.5.0",
+    "requirejs": "~2.1.11",
+    "gulp-imagemin": "~0.2.0"
   }
 }

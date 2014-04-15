@@ -8,11 +8,16 @@ module.exports = (app, express) ->
   app.configure "development", ->
     app.use express.logger "dev"
     app.use express.errorHandler()
+    app.set "layouts", "layouts"
+    app.use express.static path.join __dirname, "..", "public"
+
+  app.configure "production", ->
+    app.set "layouts", path.join "layouts","dist"
+    app.use express.static path.join __dirname, "..", "dist", "public"
 
   app.configure ->
     
     app.set "views", path.join __dirname, "views"
-    app.set "layouts", "layouts"
     app.set "view engine", "hjs"
 
     app.use layout
@@ -21,6 +26,5 @@ module.exports = (app, express) ->
     app.use express.urlencoded()
     app.use express.methodOverride()
     app.use app.router
-    app.use express.static path.join __dirname, "..", "public"
 
   app.port = process.env.PORT || 3000
