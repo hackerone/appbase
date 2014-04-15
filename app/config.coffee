@@ -12,7 +12,7 @@ module.exports = (app, express) ->
     app.use express.static path.join __dirname, "..", "public"
 
   app.configure "production", ->
-    app.set "layouts", "layouts"
+    app.set "layouts", path.join "layouts", "dist"
     app.use express.static path.join __dirname, "..", "dist"
 
   app.configure ->
