@@ -1,18 +1,8 @@
 var gulp = require('gulp'),
 	util = require('gulp-util'),
-	sass = require('gulp-sass'),
-	livereload = require('gulp-livereload'),
-	server = require('tiny-lr')(),
-	prefix = require('gulp-autoprefixer'),
-	jshint = require('gulp-jshint'),
-	nodemon = require('gulp-nodemon'),
-	coffee = require('gulp-coffee'),
-	coffeelint = require('gulp-coffeelint'),
-	plumber = require('gulp-plumber'),
-	watch = require('gulp-watch'),
+	$ = require('gulp-load-plugins')(),
 	hogan = require('gulp-hogan-compile'),
-	rjs = require('requirejs'),
-	imgmin = require('gulp-imagemin');
+	rjs = require('requirejs');
 
 var source = {
 	sass: ['public/sass/**/*.scss'],
@@ -37,45 +27,45 @@ var dist = {
 
 gulp.task('style', function(){
 	return gulp.src(source.sass)
-		.pipe(plumber())
-		.pipe(sass({
+		.pipe($.plumber())
+		.pipe($.sass({
 			outputStyle: 'expanded'
 		}))
-		.pipe(prefix("last 3 version"))
+		.pipe($.autoprefixer("last 3 version"))
 		.pipe(gulp.dest(dest.css))
-		.pipe(livereload());
+		.pipe($.livereload());
 });
 
 gulp.task('lr', function () {
 	return gulp.src(['views/**/*.hjs', 'models/**/*.js', 'routes/**/*.js'])
-			.pipe(livereload());
+			.pipe($.livereload());
 });
 
 
 gulp.task('js', function(){
 	return gulp.src(source.js)
-		.pipe(jshint())
-		.pipe(jshint.reporter('default'))
-		.pipe(livereload());
+		.pipe($.jshint())
+		.pipe($.jshint.reporter('default'))
+		.pipe($.livereload());
 });
 
 gulp.task('cafe', function() {
 	return gulp.src(source.coffee)
-				.pipe(plumber())
-				.pipe(coffeelint())
-				.pipe(coffee({ sourceMap: true, sourceRoot: '../coffee' }))
+				.pipe($.plumber())
+				.pipe($.coffeelint())
+				.pipe($.coffee({ sourceMap: true, sourceRoot: '../coffee' }))
 				.pipe(gulp.dest(dest.js));
 });
 
 gulp.task('template', function() {
 	return gulp.src(source.template)
-						.pipe(plumber())
+						.pipe($.plumber())
 						.pipe(hogan('tmpl.js'))
 						.pipe(gulp.dest(dest.js));
 });
 
 gulp.task('dev', function () {
-	nodemon({
+	$.nodemon({
 		script: 'server.coffee', ext: 'hjs js coffee', ignore: ['public/*.js', 'coffee/*.coffee']
 	});
 });
@@ -93,7 +83,7 @@ gulp.task('pack', function () {
 
 gulp.task('images', function () {
 	return gulp.src(source.img)
-		.pipe(imgmin())
+		.pipe($.imagemin())
 		.pipe(gulp.dest(dist.img));
 });
 
@@ -104,11 +94,11 @@ gulp.task('fonts', function () {
 
 gulp.task('csspack', function () {
 	return gulp.src(source.sass)
-		.pipe(plumber())
-		.pipe(sass({
+		.pipe($.plumber())
+		.pipe($.sass({
 			outputStyle: 'compressed'
 		}))
-		.pipe(prefix("last 3 version"))
+		.pipe($.autoprefixer("last 3 version"))
 		.pipe(gulp.dest(dist.css));
 });
 
