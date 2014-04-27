@@ -20,7 +20,9 @@
     </div>
   </div>
   <div id="skrollr-body">
-    {{{content}}}
+    <div class="app">
+      {{{content}}}
+    </div>
 
     <div class="footer-wrap">
       <div class="container">

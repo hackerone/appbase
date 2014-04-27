@@ -1,0 +1,85 @@
+.listing-gallery{
+  @extend .col-md-8;
+  padding-right: 0;
+  .heading{
+    background: rgba($blue, 0.8);
+    padding: 10px;
+    color: white;
+    text-align: center;
+    a{
+      @include link-colors(rgba(white,0.4), white);
+
+      &.active{
+        color: white;
+      }
+
+      padding-right: 0;
+
+      font-weight: $light-wt;
+      text-transform: uppercase;
+      display: inline-block;
+      @extend .size-18;
+      padding: 0 10px;
+    }
+  }
+
+  .gallery, .calendar{
+    display: none;
+    &.active{
+      display: block;
+    }
+    position: relative;
+    overflow:hidden; 
+  }
+
+  .gallery:hover .swipe-control{
+    bottom: 0;
+    opacity: 1;
+  }
+
+  .swipe-control{
+
+    position: relative;
+
+    padding: 10px 0;
+    background: rgba($btn-blue, 0.9);
+    .next, .prev{
+      position: absolute;
+      top: 0;
+      width: 40px;
+      text-align: center;
+      height: 120px;
+      line-height: 120px;
+      @include link-colors(rgba(white, 0.4), white); 
+      @extend .icon-font;
+    }
+
+    .prev{
+      left: 0;
+      &:before{
+        @extend .icon-arrow-left:before;
+      }
+    }
+    .next{
+      right: 0;
+      &:after{
+        @extend .icon-arrow-right:before;
+      }
+    }
+
+    .item-target{
+      z-index: 1;
+      &:hover{
+        z-index: 2;
+      }
+    }
+
+    .swipe-thumb{
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      justify-content: space-around;
+      margin: 0 40px;
+    }
+  }
+}

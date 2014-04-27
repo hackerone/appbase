@@ -1,29 +1,35 @@
-(function() {
-  require.config({
-    shim: {
-      "skrollr": {
-        "exports": "skrollr"
-      }
+require.config({
+  shim: {
+    "skrollr": {
+      "exports": "skrollr"
     },
-    paths: {
-      "jquery": "../components/jquery/dist/jquery",
-      "backbone": "../components/backbone/backbone",
-      "underscore": "../components/lodash/dist/lodash.underscore",
-      "skrollr": "../components/skrollr/src/skrollr",
-      "rjs": "../components/requirejs/require",
-      "selectize": "../components/selectize/dist/js/standalone/selectize.min"
+    "swipe": {
+      "exports": "Swipe"
     }
-  });
+  },
+  paths: {
+    "jquery": "../components/jquery/dist/jquery",
+    "backbone": "../components/backbone/backbone",
+    "underscore": "../components/lodash/dist/lodash.underscore",
+    "skrollr": "../components/skrollr/src/skrollr",
+    "rjs": "../components/requirejs/require",
+    "selectize": "../components/selectize/dist/js/standalone/selectize.min",
+    "swipe": "../components/swipe/swipe"
+  }
+});
 
-  require(["skrollr", "selectize"], function(skrollr) {
-    skrollr.init({
-      forceHeight: false,
-      smoothScrolling: false
-    });
-    return $('select').selectize();
+require(["backbone", "skrollr", "routes/app", "selectize"], function(Backbone, skrollr, App) {
+  var app;
+  skrollr.init({
+    forceHeight: false,
+    smoothScrolling: false
   });
-
-}).call(this);
+  $('select').selectize();
+  app = new App();
+  return Backbone.history.start({
+    pushState: true
+  });
+});
 
 /*
 //# sourceMappingURL=main.js.map

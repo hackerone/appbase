@@ -31,7 +31,8 @@ gulp.task('style', function(){
 	return gulp.src(source.sass)
 		.pipe($.plumber())
 		.pipe($.sass({
-			outputStyle: 'expanded'
+			outputStyle: 'expanded',
+			sourceComments: 'map'
 		}))
 		.pipe($.autoprefixer("last 3 version"))
 		.pipe(gulp.dest(dest.css))
@@ -55,7 +56,7 @@ gulp.task('cafe', function() {
 	return gulp.src(source.coffee)
 				.pipe($.plumber())
 				.pipe($.coffeelint())
-				.pipe($.coffee({ sourceMap: true, sourceRoot: '../coffee' }))
+				.pipe($.coffee({ sourceMap: true, sourceRoot: '../coffee', bare: true }))
 				.pipe(gulp.dest(dest.js));
 });
 

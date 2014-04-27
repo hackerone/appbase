@@ -1,19 +1,39 @@
+.header-bg{
+  position: relative;
+}
 .bg-image{
   position: absolute;
-  left: 0; top: $navbar-height; right: 0;
-  height: 750px;
+  left: -450%; top: 0; right: -450%;
+  bottom: 0;
   z-index: -1;
-  background: url(/img/header.jpg) no-repeat top center;
   background-size: auto 100%;
+  &:after{
+    content: " ";
+    left: 0; right: 0; bottom: 0; top: 0;
+    position: absolute;
+    z-index: 2;
+    background: rgba(0,0,0,0.5)
+  }
+  .gallery-bg.active{
+    z-index: 1;
+    position: relative;
+    min-height: 100%;
+    min-width: 10%;
+    display: block;
+    margin: 0 auto;
+    filter: blur(10px);
+    transform: translate3d(0px,0,0);
+  }
 }
 .header-wrap{
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 .heading-col{
   color: white;
   @extend .col-md-8;
+  @extend .txt-shadow;
   h1{
     font-weight: $light-wt; 
     margin-top: 30px;
@@ -81,8 +101,11 @@
 
 .booking-details-heading{
   @extend .col-md-4;
+  @extend .txt-shadow;
   color: white;
   h4{
+    @extend .size-22;
+    font-weight: $light-wt;
     text-transform: uppercase;
   }
 }
