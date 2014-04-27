@@ -1,0 +1,30 @@
+.footer-wrap{
+  background: $footer-bg;
+  color: white;
+  h3{
+    text-transform: uppercase;
+    margin: 0;
+    padding: 26px 0;
+    font-weight: normal;
+  }
+  a{
+    @include link-colors($footer-text, lighten($footer-text, 10%));
+  }
+
+  ul{
+    margin: 0 0 15px 0;
+    padding: 0;
+    list-style: none;
+    li{
+      line-height: 1.8;
+    }
+  }
+  .dark-strip{
+    background: $footer-bg-dark;
+    line-height: 48px;
+    margin-top: 45px;
+    .icon-logo{
+      font-size: 32px;
+    }
+  }
+}

@@ -8,6 +8,11 @@ require.config
     "underscore" : "../components/lodash/dist/lodash.underscore",
     "skrollr": "../components/skrollr/src/skrollr"
     "rjs": "../components/requirejs/require"
+    "selectize": "../components/selectize/dist/js/standalone/selectize.min"
 
-require ["skrollr"], (skrollr) ->
-  skrollr.init()
+require ["skrollr", "selectize"], (skrollr) ->
+  skrollr.init
+    forceHeight: false
+    smoothScrolling: false
+
+  $('select').selectize();

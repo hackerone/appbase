@@ -29,7 +29,7 @@
     position: absolute;
     bottom: 0; left: $grid-gutter-width / 2; right: $grid-gutter-width / 2;
     color: white;
-    font-weight: 300;
+    font-weight: $light-wt;
     font-size: 22px;
     text-transform: uppercase;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
@@ -45,6 +45,23 @@
       font-weight: 500;
     }
   }
+
+
+  .name-box{
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 50px 10px 10px 10px;
+    color: white;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+    span{
+      display: block;
+      @extend .size-18;
+    }
+    .location{
+      font-weight: $light-wt;
+    }
+  }
+
 
 }
 
@@ -79,21 +96,6 @@
   }
 
 
-  .name-box{
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    padding: 50px 10px 10px 10px;
-    color: white;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
-    span{
-      display: block;
-      font-size: 18px;
-    }
-    .location{
-      font-weight: 300;
-    }
-  }
-
   .detail-box{
     background: white;
     padding: 10px;
@@ -122,7 +124,7 @@
         .time{
           color: $btn-blue;
           font-size: 0.6em;
-          font-weight: 300;
+          font-weight: $light-wt;
         }
       }
     }

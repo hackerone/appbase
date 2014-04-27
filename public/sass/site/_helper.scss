@@ -24,6 +24,7 @@ a, button{
 .btn.btn-yellow{
   background: $yellow;
   color: $blue;
+  box-shadow: 0 2px 1px rgba(0,0,0,0.1);
   &:hover{
     background: $blue;
     color: $yellow;
@@ -58,4 +59,18 @@ a, button{
     }
   }
   
+}
+
+.rt{
+  text-align: right;
+}
+
+.selectize-input {
+  > input{
+    &:hover, &:focus, &:active{
+      box-shadow: none !important;
+      border: 0 !important;
+      outline: 0;
+    }
+  }
 }

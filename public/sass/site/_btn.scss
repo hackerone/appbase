@@ -1,0 +1,36 @@
+.btn-yellow{
+  background: $yellow;
+  color: $blue;
+  box-shadow: 0 2px 1px rgba(0,0,0,0.1);
+  &:hover{
+    background: $blue;
+    color: $yellow;
+  }
+}
+
+.btn-search{
+  @extend .btn; 
+  @extend .btn-yellow;
+  @extend .size-20;
+  display: block;
+  width: 100%;
+}
+
+
+a, button{
+  transition: all linear 0.2s;
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+
+.btn-big{
+  font-size: 22px;
+  width: 100%;
+  display: block;
+}
+
+.sidebar .btn-big{
+  margin-bottom: 20px;
+}

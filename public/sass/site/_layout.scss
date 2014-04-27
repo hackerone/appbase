@@ -48,6 +48,8 @@ body{
 
 .grey-bg{
   background: $grey;
+  position: relative;
+  z-index: 1;
 }
 
 .app{

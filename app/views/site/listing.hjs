@@ -1,0 +1,280 @@
+<div class="bg-image">
+  
+</div>
+<div class="container header-wrap">
+  <div class="row">
+    <div class="heading-col">
+      <a href="" class="heading-icon">
+        <i class="icon-font icon-sailboat"></i>
+      </a>
+      <h1 class="heading">Catamaran in the Caribbeans</h1>
+      <p class="tag">
+        <span class="type">Sailboat - sailing, diving</span>
+        <span class="location"><i class="icon-location"></i> San Barth, Caribbeans</span>
+      </p>
+    </div>
+    <div class="tools-col">
+      <a href=""><i class="icon-font icon-heart"></i></a>
+      <a href=""><i class="icon-font icon-comments"></i> 12</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="social-col">
+      <ul class="social-icons-list">
+        <li><a href=""><i class="icon-font icon-tw"></i></a></li>
+        <li><a href=""><i class="icon-font icon-fb"></i></a></li>
+        <li><a href=""><i class="icon-font icon-gp"></i></a></li>
+      </ul>
+    </div>
+    <div class="booking-details-heading">
+      <h4>Booking Details</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="interact-wrap">
+      <div class="heading">
+        <a href="">Gallery</a>
+        <a href="">Calendar</a>
+      </div>
+      <div class="gallery">
+        <a href="#"><i class="icon-font icon-fs"></i></a>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="" alt=""></div>
+            <div class="swiper-slide"><img src="" alt=""></div>
+            <div class="swiper-slide"><img src="" alt=""></div>
+          </div>
+        </div>
+      </div>
+      <div class="calendar">
+        
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="yellow-box">
+        <form action="" class="form">
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-6">
+                <label>From</label>
+                <div class="number">$545</div>
+              </div>
+              <div class="col-md-6">
+                <label for="day">Per</label>
+                <select name="" id="">
+                  <option value="day">Day</option>
+                  <option value="week">Week</option>
+                  <option value="month">Month</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            Minimum stay: <b>4 days</b>
+          </div>
+          <div class="form-group inline">
+            <input type="text" class="form-control" placeholder="In">
+            <input type="text" class="form-control" placeholder="Out">
+            <input type="text" class="form-control" placeholder="Guests">
+          </div>
+          <div class="form-group">
+            <select name="" id="" multiple="multiple">
+              <option value="food">Food</option>
+              <option value="fuel">Fuel</option>
+            </select>
+          </div>
+        </form>
+      </div>
+
+      <div class="total">
+        <label for="">Subtotal</label>
+        <div class="number">$2543</div>
+        <p class="small-print">
+          Full pension included <br>
+          Antlos service fee ($151)
+        </p>
+        <a class="btn-yellow btn btn-big">Book now</a>
+      </div>
+
+      <div class="skipper-info">
+        <h4 class="heading">The skipper</h4>
+        <img src="/img/skipper-thumb.jpg" alt="" class="skipper-thumb">
+          <div class="meta">
+            <div class="info">
+              <h3 class="name">Walter K.</h3>
+              <span class="age">32</span>,
+              <span class="years">7 years of experience</span>
+            </div>
+            <div class="score">
+              <i class="icon-font icon-like"></i> 98%
+            </div>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nostrum, sint, eius, quisquam autem odit </p>
+
+          <h4 class="heading">User Statistics</h4>
+          <div class="stat-box">
+            <div class="stat-group">
+              <label for="">Response rate</label>
+              <div class="text">95%</div>
+            </div>
+            <div class="stat-group">
+              <label for="">Response time</label>
+              <div class="text">Few hours</div>
+            </div>
+            <div class="stat-group">
+              <label for="">Last update</label>
+              <div class="text">2 days ago</div>
+            </div>
+          </div>
+
+          <div class="btn-yellow btn-big btn">Contact</div>
+        </div>
+      <!-- skipper-info -->
+
+      <div class="similar-exp">
+        <h4 class="heading">Similar Experiences</h4>
+        <div class="list">
+          
+
+          <div class="item">
+            <a href="#item"><img src="/img/small-img.jpg" class="item-thumb"></a>
+            
+            <div class="price meta-info">
+              <div class="number">$545</div>
+              <div class="time">per day</div>
+            </div>
+            
+            <div class="name-box">
+              <a href="#" class="boat-type" title="Motor Boat"><i class="icon-font icon-motorboat"></i></a>
+              <span class="name">Big game fishing in paradise</span>
+              <span class="location"><i class="icon-font icon-location"></i> Golfo di Orosei, Sardina, Italy</span>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+      <!-- similar exp -->
+
+    </div>
+    <!-- sidebar -->
+  </div>
+</div>
+
+<div class="grey-bg">
+  <div class="container">
+      <div class="row">
+        <div class="listing-content">
+
+          <div class="tab-wrap">
+            <ul class="tabs">
+              <li><a href="#description">Description</a></li>
+              <li><a href="#boat">Boat and rules</a></li>
+              <li><a href="#itineraries">Itineraries</a></li>
+              <li><a href="#map">Map</a></li>
+            </ul>
+            <div class="tab-content">
+              <div id="description" class="tab">
+                <h3>Overview</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, necessitatibus esse nulla id omnis corrupti quis? Eos, aliquid excepturi corporis similique sed enim porro iste! Ut tenetur iusto ea repudiandae!</p>
+                <h3>Activities</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate quis maiores provident veniam facere perferendis eos rerum? Error, nemo, dolorem, molestias quaerat ipsum veniam labore deserunt laborum sunt quasi doloribus.</p>
+
+                <div class="feature-wrap">
+                  <div class="feature-item">
+                    <label for="">Max Guests</label>
+                    <div class="text">8</div>
+                  </div>
+                  <div class="feature-item">
+                    <label for="">Max Guests</label>
+                    <div class="text">8</div>
+                  </div>
+                  <div class="feature-item">
+                    <label for="">Max Guests</label>
+                    <div class="text">8</div>
+                  </div>
+                  <div class="feature-item">
+                    <label for="">Max Guests</label>
+                    <div class="text">8</div>
+                  </div>
+                  <div class="feature-item">
+                    <label for="">Max Guests</label>
+                    <div class="text">8</div>
+                  </div>
+                  <div class="feature-item">
+                    <label for="">Max Guests</label>
+                    <div class="text">8</div>
+                  </div>
+                  <div class="feature-item">
+                    <label for="">Max Guests</label>
+                    <div class="text">8</div>
+                  </div>
+                  <div class="feature-item">
+                    <label for="">Max Guests</label>
+                    <div class="text">8</div>
+                  </div>
+                  <div class="feature-item">
+                    <label for="">Max Guests</label>
+                    <div class="text">8</div>
+                  </div>
+                  <div class="feature-item">
+                    <label for="">Max Guests</label>
+                    <div class="text">8</div>
+                  </div>
+                  <div class="feature-item">
+                    <label for="">Max Guests</label>
+                    <div class="text">8</div>
+                  </div>
+                  <div class="feature-item">
+                    <label for="">Max Guests</label>
+                    <div class="text">8</div>
+                  </div>
+                  <div class="feature-item">
+                    <label for="">Max Guests</label>
+                    <div class="text">8</div>
+                  </div>
+                  <div class="feature-item">
+                    <label for="">Max Guests</label>
+                    <div class="text">8</div>
+                  </div>
+                </div>
+                <!-- feature wrap -->
+              </div>
+              <div class="tab" id="boat">
+                
+              </div>
+
+            </div>
+          </div>
+          <!-- tab-wrap -->
+
+          <div class="ratings">
+            <div class="overall">
+              <h3>Overall Rating</h3>
+              <div class="rating star-4"></div>
+            </div>
+            <div class="score-wrap">
+              <score-item>
+                <label for="">Location</label>
+                <div class="score score-4"></div>
+              </score-item>
+              <score-item>
+                <label for="">Location</label>
+                <div class="score score-4"></div>
+              </score-item>
+              <score-item>
+                <label for="">Location</label>
+                <div class="score score-4"></div>
+              </score-item>
+              <score-item>
+                <label for="">Location</label>
+                <div class="score score-4"></div>
+              </score-item>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+  </div>
+  
+</div>

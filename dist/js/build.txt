@@ -2,4 +2,6 @@
 main.js
 ----------------
 skrollr.js
+jquery.js
+selectize.js
 main.js

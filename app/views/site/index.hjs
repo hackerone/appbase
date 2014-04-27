@@ -117,7 +117,7 @@
                   <span class="verified">Verified Skipper</span>
                 </a>
               </div>
-              <a href="" class="fav-item"><span class="i icon icon-fav"></span></a>
+              <a href="" class="fav-item"><span class="icon-font icon-heart"></span></a>
               <div class="name-box">
                 <i class="icon icon-boat"></i>
                 <span class="name">Big game fishing in paradise</span>
@@ -185,7 +185,6 @@
 
     <div class="container">
       <div class="info-wrap">
-        {{#items}}
         <div class="info-box">
           <img src="/img/info.jpg" class="info-thumb">
           <div class="text">
@@ -193,6 +192,23 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, consectetur, doloremque explicabo blanditiis pariatur iure dicta inventore sunt.</p>
           </div>
         </div>
-        {{/items}}
+
+
+        <div class="info-box">
+          <img src="/img/info.jpg" class="info-thumb">
+          <div class="text">
+            <h3>Weather insurance</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, consectetur, doloremque explicabo blanditiis pariatur iure dicta inventore sunt.</p>
+          </div>
+        </div>
+
+
+        <div class="info-box">
+          <img src="/img/info.jpg" class="info-thumb">
+          <div class="text">
+            <h3>Guest refund policy</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, consectetur, doloremque explicabo blanditiis pariatur iure dicta inventore sunt.</p>
+          </div>
+        </div>
       </div>
     </div>

@@ -19,6 +19,8 @@ var dest = {
 };
 
 var dist = {
+	base: ['dist/**/**'],
+	rev: ['dist/js/main', 'dist/css/**/*.css'],
 	css: 'dist/css',
 	js: 'dist/js',
 	img: 'dist/img',
@@ -70,7 +72,33 @@ gulp.task('dev', function () {
 	});
 });
 
-gulp.task('pack', function () {
+gulp.task('cleandist', function () {
+	return gulp.src(dist.base)
+		.pipe($.clean());
+});
+
+
+gulp.task('assets', ['cleandist'], function (cb) {
+	// image optimizer
+	var img = gulp.src(source.img)
+		.pipe($.imagemin())
+		.pipe(gulp.dest(dist.img));
+
+	// optimize fonts
+	var fonts = gulp.src(source.fonts)
+		.pipe(gulp.dest(dist.fonts));
+
+	// optimize css
+
+	var css = gulp.src(source.sass)
+		.pipe($.plumber())
+		.pipe($.sass({
+			outputStyle: 'compressed'
+		}))
+		.pipe($.autoprefixer("last 3 version"))
+		.pipe(gulp.dest(dist.css));
+
+	// optmize js
 	rjs.optimize({
 		dir: "dist/js",
 		baseUrl: "public/js",
@@ -78,7 +106,16 @@ gulp.task('pack', function () {
 		modules: [{
 					name: "main"
 				}]
+	}, function(response) {
+		return img && fonts && css && cb() ;
 	});
+
+});
+
+gulp.task('pack', ['assets'], function () {
+	return gulp.src(dist.rev)
+			.pipe($.rev())
+			.pipe(gulp.dest('dist/js'));
 });
 
 gulp.task('images', function () {
@@ -102,7 +139,14 @@ gulp.task('csspack', function () {
 		.pipe(gulp.dest(dist.css));
 });
 
-
+// hack to rename all css files to scss, so they can be imported into scss
+gulp.task('cssfix', function () {
+	return gulp.src(['public/components/**/*.css'])
+			.pipe($.rename(function (path) {
+				path.extname = ".scss";
+			}))
+			.pipe(gulp.dest('public/components'));
+});
 
 
 gulp.task('watch', function () {

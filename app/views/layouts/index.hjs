@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" href="/css/common.css">
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:400,300">
+  <!--<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:400,300">-->
   <meta charset="UTF-8">
   <title>{{title}}</title>
 </head>
@@ -19,8 +19,69 @@
       </div>
     </div>
   </div>
+  <div id="skrollr-body">
+    {{{content}}}
 
-  {{{content}}}
+    <div class="footer-wrap">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h3>How to</h3>
+            <ul>
+              <li><a href="">Book an experience</a></li>
+              <li><a href="">Publish your experience</a></li>
+              <li><a href="">Customer support</a></li>
+            </ul>
+            <h3>Language</h3>
+            <select name="" id="">
+              <option value="en">English (UK)</option>
+              <option value="it">Italian</option>
+              <option value="fr">French</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <h3>When at sea</h3>
+            <ul>
+              <li><a href="">First timers</a></li>
+              <li><a href="">Skipper requirements</a></li>
+              <li><a href="">Rules of the sea</a></li>
+            </ul>
+            <h3>Currency</h3>
+            <select name="" id="">
+              <option value="GBP">GBP</option>
+              <option value="USD">USD</option>
+              <option value="EUR">EUR</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <h3>Antlos</h3>
+            <ul>
+              <li><a href="">About us</a></li>
+              <li><a href="">Investors</a></li>
+              <li><a href="">Jobs</a></li>
+            </ul>
+            <h3>Legal Stuff</h3>
+            <ul>
+              <li><a href="">Privacy Policy</a></li>
+              <li><a href="">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="dark-strip">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">&copy; 2014 Antlos</div>
+            <div class="col-md-6">Startup based in Islington, London. <a href="">cookie policy</a></div>
+            <div class="col-md-2 rt"><a href="" class="logo"><i class="icon-font icon-logo"></i></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->    
+  </div>
+  <!-- skrollr-body -->
+
  
   <script data-main="/js/main" src="/components/requirejs/require.js"></script>
 </body>
