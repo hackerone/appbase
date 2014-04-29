@@ -78,25 +78,7 @@ gulp.task('cleandist', function () {
 });
 
 
-gulp.task('assets', ['cleandist'], function (cb) {
-	// image optimizer
-	var img = gulp.src(source.img)
-		.pipe($.imagemin())
-		.pipe(gulp.dest(dist.img));
-
-	// optimize fonts
-	var fonts = gulp.src(source.fonts)
-		.pipe(gulp.dest(dist.fonts));
-
-	// optimize css
-
-	var css = gulp.src(source.sass)
-		.pipe($.plumber())
-		.pipe($.sass({
-			outputStyle: 'compressed'
-		}))
-		.pipe($.autoprefixer("last 3 version"))
-		.pipe(gulp.dest(dist.css));
+gulp.task('jspack', ['images'], function (cb) {
 
 	// optmize js
 	rjs.optimize({
@@ -107,40 +89,39 @@ gulp.task('assets', ['cleandist'], function (cb) {
 					name: "main"
 				}]
 	}, function(response) {
-		return img && fonts && css && cb() ;
+		return cb();
 	});
 
 });
 
-gulp.task('pack', ['assets'], function () {
-		gulp.src(["dist/js/*.js"])
+
+
+gulp.task('pack', ['jspack'], function () {
+	return gulp.src(["dist/js/*.js"])
 			.pipe($.rev())
 			.pipe(gulp.dest('dist/js'));
-
-		gulp.src(["dist/css/*.css"])
-			.pipe($.rev())
-			.pipe(gulp.dest("dist/css"));
-
 });
 
-gulp.task('images', function () {
+
+gulp.task('images', ['fonts'], function () {
 	return gulp.src(source.img)
 		.pipe($.imagemin())
 		.pipe(gulp.dest(dist.img));
 });
 
-gulp.task('fonts', function () {
+gulp.task('fonts', ['csspack'], function () {
 	return gulp.src(source.fonts)
 		.pipe(gulp.dest(dist.fonts));
 });
 
-gulp.task('csspack', function () {
+gulp.task('csspack', ['cleandist'],function () {
 	return gulp.src(source.sass)
 		.pipe($.plumber())
 		.pipe($.sass({
 			outputStyle: 'compressed'
 		}))
 		.pipe($.autoprefixer("last 3 version"))
+		.pipe($.rev())
 		.pipe(gulp.dest(dist.css));
 });
 
