@@ -65,7 +65,7 @@ define(["backbone", "swipe", "bs/tab"], function(Backbone, Swipe) {
       return setTimeout(function() {
         bot.attr('src', img.data('thumb'));
         return top.addClass('inactive');
-      }, 100);
+      }, 400);
     }
   });
 });
