@@ -8,10 +8,10 @@
     li{
       border: 0;
     }
-    .active a{
-      border-color: white;
-
+    .active a, a:hover, &:hover a{
+      border-color: transparent;
     }
+    
     a{    
       @extend .size-18;
       line-height: 1.5;

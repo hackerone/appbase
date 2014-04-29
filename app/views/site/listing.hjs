@@ -261,14 +261,17 @@
                 <!-- feature wrap -->
               </div>
               <div class="tab-pane" id="boat">
-                
+                <h3>Boat and rules</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, eligendi voluptates error omnis culpa incidunt asperiores velit cupiditate ullam hic perspiciatis nemo distinctio commodi tempora provident harum vitae eveniet iste!</p>
               </div>
               <div class="tab-pane" id="itineraries">
-                
+                <h3>Itineraries</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi dolorem tempora iste rem odio rerum provident voluptatibus doloribus. Corporis, rerum quam ratione numquam aut eaque aperiam dolor dolorem sequi autem?</p>
               </div>
 
               <div class="tab-pane" id="map">
-                
+                <h3>Map</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, unde, illum labore est delectus minima ipsum soluta mollitia! Eaque ipsa sint atque vel cum veritatis blanditiis quod culpa rem possimus.</p>
               </div>
 
             </div>

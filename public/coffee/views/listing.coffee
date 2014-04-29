@@ -1,4 +1,4 @@
-define ["backbone", "swipe"], (Backbone, Swipe) ->
+define ["backbone", "swipe", "bs/tab"], (Backbone, Swipe) ->
   Backbone.View.extend
     el: ".app"
 
@@ -7,6 +7,8 @@ define ["backbone", "swipe"], (Backbone, Swipe) ->
       "click .swipe-control .prev": "slidePrev"
       "click .item-target": "slideTo"
 
+      "click .nav-tabs a" : "switchTab"
+
     initialize: () ->
 
       @$('.bg-image').addClass('active')
@@ -14,7 +16,11 @@ define ["backbone", "swipe"], (Backbone, Swipe) ->
 
       @initSwipe()
 
-      @initTab
+    switchTab: (e) ->
+      e.preventDefault()
+
+      $(e.currentTarget).tab('show')
+
 
       
     initSwipe: () ->
@@ -67,14 +73,14 @@ define ["backbone", "swipe"], (Backbone, Swipe) ->
       bot = @$('.img.bot')
       top = @$('.img.top')
 
-      src = bot.prop('src')
-      top.prop('src', src)
+      src = bot.attr('src')
+      top.attr('src', src)
       top.removeClass('inactive')
 
       setTimeout () ->
-        bot.prop('src', img.data('thumb'))
+        bot.attr('src', img.data('thumb'))
         top.addClass('inactive')
-      , 200
+      , 100
 
 
       

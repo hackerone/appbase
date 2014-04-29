@@ -1,17 +1,21 @@
-define(["backbone", "swipe"], function(Backbone, Swipe) {
+define(["backbone", "swipe", "bs/tab"], function(Backbone, Swipe) {
   return Backbone.View.extend({
     el: ".app",
     events: {
       "click .swipe-control .next": "slideNext",
       "click .swipe-control .prev": "slidePrev",
-      "click .item-target": "slideTo"
+      "click .item-target": "slideTo",
+      "click .nav-tabs a": "switchTab"
     },
     initialize: function() {
       var self;
       this.$('.bg-image').addClass('active');
       self = this;
-      this.initSwipe();
-      return this.initTab;
+      return this.initSwipe();
+    },
+    switchTab: function(e) {
+      e.preventDefault();
+      return $(e.currentTarget).tab('show');
     },
     initSwipe: function() {
       var self, thumbSlide, thumbWrap;
@@ -55,13 +59,13 @@ define(["backbone", "swipe"], function(Backbone, Swipe) {
       $($('.item-target')[i]).addClass('active');
       bot = this.$('.img.bot');
       top = this.$('.img.top');
-      src = bot.prop('src');
-      top.prop('src', src);
+      src = bot.attr('src');
+      top.attr('src', src);
       top.removeClass('inactive');
       return setTimeout(function() {
-        bot.prop('src', img.data('thumb'));
+        bot.attr('src', img.data('thumb'));
         return top.addClass('inactive');
-      }, 200);
+      }, 100);
     }
   });
 });

@@ -6,6 +6,7 @@ jquery.js
 backbone.js
 skrollr.js
 swipe.js
+bs/tab.js
 views/listing.js
 routes/app.js
 selectize.js

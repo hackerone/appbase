@@ -10,10 +10,17 @@
 
   }
   .logo{
-    font-size: 40px;
-    line-height: 0.8;
     display: inline-block;
+
+
     i{
+      display: block;
+      font-size: 54px;
+      margin-bottom: -30px;
+      margin-top: -15px;
+      top: 5px;
+      position: relative;
+      
       display: block;
     }
   }

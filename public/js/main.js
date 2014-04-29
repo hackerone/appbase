@@ -5,7 +5,8 @@ require.config({
     },
     "swipe": {
       "exports": "Swipe"
-    }
+    },
+    "bs": ["jquery"]
   },
   paths: {
     "jquery": "../components/jquery/dist/jquery",
@@ -14,7 +15,8 @@ require.config({
     "skrollr": "../components/skrollr/src/skrollr",
     "rjs": "../components/requirejs/require",
     "selectize": "../components/selectize/dist/js/standalone/selectize.min",
-    "swipe": "../components/swipe/swipe"
+    "swipe": "../components/swipe/swipe",
+    "bs": "../components/bootstrap-sass/vendor/assets/javascripts/bootstrap"
   }
 });
 
