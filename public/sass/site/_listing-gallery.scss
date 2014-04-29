@@ -2,7 +2,7 @@
   @extend .col-md-8;
   padding-right: 0;
   .heading{
-    background: rgba($blue, 0.8);
+    background: rgba($blue, 0.6);
     padding: 10px;
     color: white;
     text-align: center;
@@ -20,6 +20,7 @@
       display: inline-block;
       @extend .size-18;
       padding: 0 10px;
+      line-height: 1.8;
     }
   }
 
@@ -37,19 +38,24 @@
     opacity: 1;
   }
 
+  .swipe-img{
+    width: 100%;
+  }
+
   .swipe-control{
 
     position: relative;
 
     padding: 10px 0;
-    background: rgba($btn-blue, 0.9);
+    background: rgba($btn-blue, 0.6);
     .next, .prev{
       position: absolute;
-      top: 0;
+      top: 50%;
       width: 40px;
       text-align: center;
-      height: 120px;
-      line-height: 120px;
+      bottom: 0;
+      margin-top: -7px;
+
       @include link-colors(rgba(white, 0.4), white); 
       @extend .icon-font;
     }
@@ -69,16 +75,35 @@
 
     .item-target{
       z-index: 1;
+      
+      &.active{
+        opacity: 1;
+         img{
+            outline: 2px solid $yellow;
+          }
+      }
+
+      opacity: 0.8;
+      transition: all linear 0.05s;
+
       &:hover{
         z-index: 2;
+        opacity: 1;
       }
+
+      img{
+        width: 100%;
+      }
+      @extend .col-md-2;
+      padding: 3px;
+      box-sizing: border-box;
+      display: block;
+      float: left;
     }
 
     .swipe-thumb{
       position: relative;
       overflow: hidden;
-      display: flex;
-      justify-content: space-around;
       margin: 0 40px;
     }
   }

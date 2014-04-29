@@ -89,10 +89,10 @@
     }
     .find-more{
       @extend .btn;
-      @extend .btn-primary;
+      @extend .btn-blue;
       font-size: 18px;
+      line-height: 42px;
       padding: 0 20px;
-      line-height: 2;
     }
   }
 }

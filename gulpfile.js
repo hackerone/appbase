@@ -20,7 +20,6 @@ var dest = {
 
 var dist = {
 	base: ['dist/**/**'],
-	rev: ['dist/js/main', 'dist/css/**/*.css'],
 	css: 'dist/css',
 	js: 'dist/js',
 	img: 'dist/img',
@@ -114,9 +113,14 @@ gulp.task('assets', ['cleandist'], function (cb) {
 });
 
 gulp.task('pack', ['assets'], function () {
-	return gulp.src(dist.rev)
+		gulp.src(["dist/js/*.js"])
 			.pipe($.rev())
 			.pipe(gulp.dest('dist/js'));
+
+		gulp.src(["dist/css/*.css"])
+			.pipe($.rev())
+			.pipe(gulp.dest("dist/css"));
+
 });
 
 gulp.task('images', function () {

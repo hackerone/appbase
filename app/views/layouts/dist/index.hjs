@@ -13,14 +13,16 @@
       <input type="text" placeholder="search">
       <a href="">Explore &nbsp; <i class="icon-arrow-down"></i></a>
       <div class="pull-right">
-        <a href="" class="btn btn-primary">Publish your offer</a>
+        <a href="" class="btn btn-yellow">Publish your offer</a>
         <a href="" class="btn">Register</a>
         <a href="" class="btn">Login</a>
       </div>
     </div>
   </div>
   <div id="skrollr-body">
-    {{{content}}}
+    <div class="app">
+      {{{content}}}
+    </div>
 
     <div class="footer-wrap">
       <div class="container">
@@ -83,6 +85,6 @@
   <!-- skrollr-body -->
 
  
-  <script data-main="/js/main" src="/js/rjs.js"></script>
+  <script data-main="/js/main" src="/components/requirejs/require.js"></script>
 </body>
 </html>

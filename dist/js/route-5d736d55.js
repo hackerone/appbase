@@ -1,0 +1,1 @@
+(function(){define(["backbone","views/listing"],function(e,t){var n;return n=e.Router.extend({routes:{listing:"listing"},listing:function(){var e;return console.log("lx"),e=new t}}),new n})}).call(this);

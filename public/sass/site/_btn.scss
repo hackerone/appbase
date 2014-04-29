@@ -3,9 +3,29 @@
   color: $blue;
   box-shadow: 0 2px 1px rgba(0,0,0,0.1);
   &:hover{
-    background: $blue;
-    color: $yellow;
+    background: lighten($yellow, 10%);
+    box-shadow: 0 3px 3px rgba(0,0,0,0.1);
   }
+  &:active{
+    background: $yellow;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1),  0 1px 3px rgba(0,0,0,0.1) inset; 
+  }
+  text-transform: uppercase;
+}
+
+.btn-blue{
+  background: $btn-blue;
+  @include link-colors(rgba(255,255,255, 0.8), white);
+
+  &:hover{
+    background: lighten(desaturate($btn-blue, 30%), 5%);
+    box-shadow: 0 3px 3px rgba(0,0,0,0.1);
+  }
+  &:active{
+    background: $btn-blue;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1),  0 1px 3px rgba(0,0,0,0.1) inset; 
+  }
+  text-transform: uppercase;
 }
 
 .btn-search{
@@ -17,8 +37,8 @@
 }
 
 
-a, button{
-  transition: all linear 0.2s;
+a, button, .btn{
+  transition: all linear 0.05s;
   &:hover{
     text-decoration: none;
   }
