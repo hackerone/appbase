@@ -79,5 +79,6 @@ define ["backbone", "swipe", "bs/tab"], (Backbone, Swipe) ->
 
       setTimeout () ->
         bot.attr('src', img.data('thumb'))
-        top.addClass('inactive')
-      , 400
+        bot.on 'load', () ->
+          top.addClass('inactive')
+      , 200

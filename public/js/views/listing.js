@@ -64,8 +64,10 @@ define(["backbone", "swipe", "bs/tab"], function(Backbone, Swipe) {
       top.removeClass('inactive');
       return setTimeout(function() {
         bot.attr('src', img.data('thumb'));
-        return top.addClass('inactive');
-      }, 400);
+        return bot.on('load', function() {
+          return top.addClass('inactive');
+        });
+      }, 200);
     }
   });
 });
