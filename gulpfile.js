@@ -85,6 +85,8 @@ gulp.task('jspack', ['images'], function (cb) {
 		dir: "dist/js",
 		baseUrl: "public/js",
 		mainConfigFile: "public/js/main.js",
+		optimize: "none",
+
 		modules: [{
 					name: "main"
 				}]

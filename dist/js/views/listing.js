@@ -1,1 +1,77 @@
-define(["backbone","swipe","bs/tab"],function(e,t){return e.View.extend({el:".app",events:{"click .swipe-control .next":"slideNext","click .swipe-control .prev":"slidePrev","click .item-target":"slideTo","click .nav-tabs a":"switchTab"},initialize:function(){var e;return this.$(".bg-image").addClass("active"),e=this,this.initSwipe()},switchTab:function(e){return e.preventDefault(),$(e.currentTarget).tab("show")},initSwipe:function(){var e,n,r;return r=$('<div class="swipe-thumb-wrap swipe-wrap"></div>'),n=$('<div class="swipe-thumb-slide"></div>'),this.$(".swipe-img").each(function(e,t){return e>1&&e%6===0&&(r.append(n),n=$('<div class="swipe-thumb-slide"></div>')),n.append("<a class='item-target' data-target="+e+"><img src='"+$(t).data("thumb")+"'></a>")}),r.append(n),this.$(".swipe-thumb").append(r),$($(".item-target")[0]).addClass("active"),this.thumbswipe=new t(this.$("#swipe-thumb")[0]),e=this,this.swipe=new t(this.$("#gallery")[0],{stopPropogation:!0,callback:function(t,n){return e.slideChange.call(e,t,$("img",n)),!0}})},slideNext:function(e){return e.preventDefault(),this.thumbswipe.next()},slidePrev:function(e){return e.preventDefault(),this.thumbswipe.prev()},slideTo:function(e){return e.preventDefault(),this.swipe.slide($(e.currentTarget).data("target"))},slideChange:function(e,t){var n,r,i;return $(".item-target").removeClass("active"),$($(".item-target")[e]).addClass("active"),n=this.$(".img.bot"),i=this.$(".img.top"),r=n.attr("src"),i.attr("src",r),i.removeClass("inactive"),setTimeout(function(){return n.attr("src",t.data("thumb")),n.on("load",function(){return i.addClass("inactive")})},200)}})});
+define(["backbone", "swipe", "bs/tab"], function(Backbone, Swipe) {
+  return Backbone.View.extend({
+    el: ".app",
+    events: {
+      "click .swipe-control .next": "slideNext",
+      "click .swipe-control .prev": "slidePrev",
+      "click .item-target": "slideTo",
+      "click .nav-tabs a": "switchTab"
+    },
+    initialize: function() {
+      var self;
+      this.$('.bg-image').addClass('active');
+      self = this;
+      return this.initSwipe();
+    },
+    switchTab: function(e) {
+      e.preventDefault();
+      return $(e.currentTarget).tab('show');
+    },
+    initSwipe: function() {
+      var self, thumbSlide, thumbWrap;
+      thumbWrap = $('<div class="swipe-thumb-wrap swipe-wrap"></div>');
+      thumbSlide = $('<div class="swipe-thumb-slide"></div>');
+      this.$('.swipe-img').each(function(i, e) {
+        if (i > 1 && i % 6 === 0) {
+          thumbWrap.append(thumbSlide);
+          thumbSlide = $('<div class="swipe-thumb-slide"></div>');
+        }
+        return thumbSlide.append("<a class='item-target' data-target=" + i + "><img src='" + $(e).data('thumb') + "'></a>");
+      });
+      thumbWrap.append(thumbSlide);
+      this.$('.swipe-thumb').append(thumbWrap);
+      $($('.item-target')[0]).addClass('active');
+      this.thumbswipe = new Swipe(this.$('#swipe-thumb')[0]);
+      self = this;
+      return this.swipe = new Swipe(this.$("#gallery")[0], {
+        stopPropogation: true,
+        callback: function(i, el) {
+          self.slideChange.call(self, i, $('img', el));
+          return true;
+        }
+      });
+    },
+    slideNext: function(e) {
+      e.preventDefault();
+      return this.thumbswipe.next();
+    },
+    slidePrev: function(e) {
+      e.preventDefault();
+      return this.thumbswipe.prev();
+    },
+    slideTo: function(e) {
+      e.preventDefault();
+      return this.swipe.slide($(e.currentTarget).data('target'));
+    },
+    slideChange: function(i, img) {
+      var bot, src, top;
+      $('.item-target').removeClass('active');
+      $($('.item-target')[i]).addClass('active');
+      bot = this.$('.img.bot');
+      top = this.$('.img.top');
+      src = bot.attr('src');
+      top.attr('src', src);
+      top.removeClass('inactive');
+      return setTimeout(function() {
+        bot.attr('src', img.data('thumb'));
+        return bot.on('load', function() {
+          return top.addClass('inactive');
+        });
+      }, 200);
+    }
+  });
+});
+
+/*
+//# sourceMappingURL=listing.js.map
+*/
