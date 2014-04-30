@@ -18,10 +18,7 @@ define ["backbone", "swipe", "bs/tab"], (Backbone, Swipe) ->
 
     switchTab: (e) ->
       e.preventDefault()
-
       $(e.currentTarget).tab('show')
-
-
       
     initSwipe: () ->
       
@@ -46,12 +43,11 @@ define ["backbone", "swipe", "bs/tab"], (Backbone, Swipe) ->
 
       self = this
 
-      @swipe = new Swipe(@$("#gallery")[0],
+      @swipe = new Swipe @$("#gallery")[0],
           stopPropogation: true
           callback: (i, el) -> 
             self.slideChange.call self, i,$('img',el)
             return true
-        )
 
     slideNext: (e) ->
       e.preventDefault()
@@ -70,15 +66,15 @@ define ["backbone", "swipe", "bs/tab"], (Backbone, Swipe) ->
       $('.item-target').removeClass('active')
       $($('.item-target')[i]).addClass('active')
 
-      bot = @$('.img.bot')
-      top = @$('.img.top')
+      top = @$('.img.bot')
+      bot = @$('.img.top')
 
-      src = bot.attr('src')
-      top.attr('src', src)
+      top.removeClass('bot').addClass('top')
+      bot.removeClass('top').addClass('bot')
+
       top.removeClass('inactive')
 
       setTimeout () ->
         bot.attr('src', img.data('thumb'))
-        bot.on 'load', () ->
-          top.addClass('inactive')
+        top.addClass('inactive')
       , 200

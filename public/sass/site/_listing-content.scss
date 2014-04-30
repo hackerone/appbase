@@ -13,7 +13,7 @@
     }
     
     a{    
-      @extend .size-18;
+      font-size: 18px;
       line-height: 1.5;
     }
   }
@@ -44,7 +44,7 @@
     float: left;
     display: flex;
     justify-content: space-between;
-    @extend .size-18;
+    font-size: 18px;
     .text{
       color: $btn-blue;
       font-weight: $light-wt;

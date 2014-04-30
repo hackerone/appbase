@@ -92,7 +92,7 @@ h4.heading{
         font-size: 18px;
       }
       .text{
-        @extend .size-20;
+        font-size: 20px;
         color: $btn-blue;
       }
 
@@ -105,7 +105,7 @@ h4.heading{
   margin-bottom: 10px;
   .name-box{
     span{
-      @extend .size-14;
+      font-size: 14px;
     }
     .boat-type{
       font-size: 30px;
@@ -125,10 +125,10 @@ h4.heading{
     padding: 10px;
 
     .number{
-      @extend .size-22;
+      font-size: 22px;
     }
     .time{
-      @extend .size-11;
+      font-size: 11px;
       font-weight: $light-wt;
     }
   }

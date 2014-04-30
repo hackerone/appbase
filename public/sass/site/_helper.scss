@@ -21,35 +21,6 @@ a, button{
   }
 }
 
-@for $i from 1 through 100 {
-  .size-#{$i}{
-    font-size: #{$i}px;
-  }
-  .size-lg-#{$i}{
-    @media (min-width: $screen-lg-min){
-      font-size: #{$i}px;
-    }
-  }
-
-  .size-md-#{$i}{
-    @media (min-width: $screen-md-min) and (max-width: $screen-md-max){
-      font-size: #{$i}px;
-    }
-  }
-
-  .size-sm-#{$i}{
-    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
-      font-size: #{$i}px;
-    }
-  }
-
-  .size-xs-#{$i}{
-    @media (min-width: $screen-xs-min) and (max-width: $screen-xs-max){
-      font-size: #{$i}px;
-    }
-  }
-  
-}
 
 .rt{
   text-align: right;
