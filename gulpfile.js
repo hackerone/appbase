@@ -123,6 +123,7 @@ gulp.task('csspack', ['cleandist'],function () {
 			outputStyle: 'compressed'
 		}))
 		.pipe($.autoprefixer("last 3 version"))
+		.pipe($.minifyCss())
 		.pipe($.rev())
 		.pipe(gulp.dest(dist.css));
 });

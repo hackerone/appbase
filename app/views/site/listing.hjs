@@ -1,8 +1,7 @@
 <div class="header-bg">
   
   <div class="bg-image">
-    <img class="img top inactive">
-    <img class="img bot" src="/img/boat-t-1.jpg">
+    <img class="img" src="/img/boat-t-1.jpg">
   </div>
 
   <div class="container header-wrap">

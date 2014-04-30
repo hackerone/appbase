@@ -9,9 +9,11 @@
 <body>
   <div class="navbar navar-default navbar-fixed-top">
     <div class="container">
-      <a href="" class="logo"><i class="icon-font icon-logo"></i></a>
-      <input type="text" placeholder="search">
-      <a href="">Explore &nbsp; <i class="icon-arrow-down"></i></a>
+      <div class="pull-left">
+        <a href="" class="logo"><i class="icon-font icon-logo"></i></a>
+        <input type="text" placeholder="search">
+        <a href="">Explore &nbsp; <i class="icon-arrow-down"></i></a>
+      </div>
       <div class="pull-right">
         <a href="" class="btn btn-yellow">Publish your offer</a>
         <a href="" class="btn">Register</a>

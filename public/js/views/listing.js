@@ -54,18 +54,14 @@ define(["backbone", "swipe", "bs/tab"], function(Backbone, Swipe) {
       return this.swipe.slide($(e.currentTarget).data('target'));
     },
     slideChange: function(i, img) {
-      var bot, top;
+      var im;
       $('.item-target').removeClass('active');
       $($('.item-target')[i]).addClass('active');
-      top = this.$('.img.bot');
-      bot = this.$('.img.top');
-      top.removeClass('bot').addClass('top');
-      bot.removeClass('top').addClass('bot');
-      top.removeClass('inactive');
-      return setTimeout(function() {
-        bot.attr('src', img.data('thumb'));
-        return top.addClass('inactive');
-      }, 200);
+      im = this.$('.img');
+      im.clone().attr('src', $(img).data('thumb')).insertAfter(im);
+      return im.fadeOut(300, function() {
+        return $(this).remove();
+      });
     }
   });
 });

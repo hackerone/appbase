@@ -18132,20 +18132,14 @@ define('views/listing',["backbone", "swipe", "bs/tab"], function(Backbone, Swipe
       return this.swipe.slide($(e.currentTarget).data('target'));
     },
     slideChange: function(i, img) {
-      var bot, src, top;
+      var im;
       $('.item-target').removeClass('active');
       $($('.item-target')[i]).addClass('active');
-      bot = this.$('.img.bot');
-      top = this.$('.img.top');
-      src = bot.attr('src');
-      top.attr('src', src);
-      top.removeClass('inactive');
-      return setTimeout(function() {
-        bot.attr('src', img.data('thumb'));
-        return bot.on('load', function() {
-          return top.addClass('inactive');
-        });
-      }, 200);
+      im = this.$('.img');
+      im.clone().attr('src', $(img).data('thumb')).insertAfter(im);
+      return im.fadeOut(300, function() {
+        return $(this).remove();
+      });
     }
   });
 });

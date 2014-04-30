@@ -23,19 +23,10 @@
     min-height: 100%;
     min-width: 100%;
     transform: translate3d(0px, 0, 0);
-  }
-
-  .top{
-    z-index: 2;
-    &.inactive{
-      opacity: 0;
-    }
-    opacity: 1;
-    transition: all 0.3s ease-out;
-  }
-
-  .bot{
     z-index: 1;
+    &:first-child{
+      z-index: 2;
+    }
   }
 
 }

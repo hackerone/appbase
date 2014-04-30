@@ -66,15 +66,11 @@ define ["backbone", "swipe", "bs/tab"], (Backbone, Swipe) ->
       $('.item-target').removeClass('active')
       $($('.item-target')[i]).addClass('active')
 
-      top = @$('.img.bot')
-      bot = @$('.img.top')
+      im = @$('.img')
 
-      top.removeClass('bot').addClass('top')
-      bot.removeClass('top').addClass('bot')
+      im.clone().attr('src', $(img).data('thumb')).insertAfter(im);
 
-      top.removeClass('inactive')
+      im.fadeOut 300, () ->
+        $(this).remove()
 
-      setTimeout () ->
-        bot.attr('src', img.data('thumb'))
-        top.addClass('inactive')
-      , 200
+
