@@ -1,5 +1,6 @@
 .listing-gallery{
   @extend .col-md-8;
+
   padding-right: 0;
   .heading{
     background: rgba($blue, 0.6);
@@ -26,6 +27,26 @@
 
   .gallery, .calendar{
     display: none;
+    position: relative;
+    
+    .expand-btn{
+      position: absolute;
+      top: 10px; left: 10px;
+      font-size: 24px;
+      display: block;
+      z-index: 10;
+      padding: 5px;
+      @extend .btn;
+      background: rgba($blue, 0.5);
+      line-height: 0;
+      height: auto;
+      i{
+        display: block;
+        line-height: 1;
+        color: white;
+      }
+    }
+
     &.active{
       display: block;
     }
@@ -50,27 +71,23 @@
     background: rgba($btn-blue, 0.6);
     .next, .prev{
       position: absolute;
-      top: 50%;
+      top: 35%;
       width: 40px;
       text-align: center;
       bottom: 0;
       margin-top: -7px;
+      font-size: 30px;
 
-      @include link-colors(rgba(white, 0.4), white); 
-      @extend .icon-font;
+      @include link-colors(rgba(white, 0.4), white);
     }
 
     .prev{
       left: 0;
-      &:before{
-        @extend .icon-arrow-left:before;
-      }
+      @include icon(nav-left);
     }
     .next{
       right: 0;
-      &:after{
-        @extend .icon-arrow-right:before;
-      }
+      @include icon(nav-right);
     }
 
     .item-target{

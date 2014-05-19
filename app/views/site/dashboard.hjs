@@ -1,0 +1,143 @@
+<div class="container dash-wrap">
+  <div class="dashboard">
+    <ul class="dash-nav">
+      <li><a href="">Overview</a></li>
+      <li><a href="">Messages <span class="alert">99</span></a></li>
+      <li class="active"><a href="">My Trips <span class="alert">99</span></a></li>
+      <li><a href="">My Listings <span class="alert">99</span></a></li>
+      <li><a href="">Profile</a></li>
+      <li><a href="">Settings</a></li>
+    </ul>
+
+    <div class="dash-header">
+      <a href="" class="inbox-selector">Inbox All <span class="alert">99</span></a>
+      <a href="" class="user-selector">
+        <img src="/img/user-2.jpg" alt="" class="user-img">
+        William Kipling <i class="icon-nav-down"></i>
+      </a>
+      <a href="" class="new-message">new message</a>
+    </div>
+    <div class="dash-content">
+      <div class="dash-sidebar">
+        <section>
+          <input type="text" class="search-box">
+        </section>
+        <section>
+          <ul class="users-list">
+            <li><a href="" class="active"><img src="/img/user-2.jpg" alt="" class="user-img"> Willian Kipling <span class="alert">99</span></a></li>
+            <li><a href=""><img src="/img/user-2.jpg" alt="" class="user-img"> Miranda <span class="alert">9</span></a></li>
+            <li><a href=""><img src="/img/user-2.jpg" alt="" class="user-img"> Michelangelo <span class="alert">10</span></a></li>
+            <li><a href=""><img src="/img/user-2.jpg" alt="" class="user-img"> Robert G. <span class="alert">9</span></a></li>
+            <li><a href=""><img src="/img/user-2.jpg" alt="" class="user-img"> Jennifer G. <span class="alert">19</span></a></li>
+          </ul>
+        </section>
+        <section class="wide">
+          <a href="" class="link">
+            <i class="icon-trash"></i> Container <span class="alert">99</span>
+          </a>
+          <a href="" class="link">
+            <i class="icon-group"></i> Group <span class="alert">99</span>
+          </a>
+        </section>
+      </div>
+
+      <div class="dash-canvas">
+        <div class="thread">
+          
+          <div class="message">
+            <img src="/img/user.jpg" alt="" class="user-img">
+            <div class="header">
+              <span class="subject">Re: Booking Information</span>
+              <div class="user-info">
+                <span class="date">Feb 20, 2014</span> <span class="from">You</span>
+              </div>
+            </div>
+            <div class="loc">
+              <img src="/img/boat.jpg" alt="" class="loc-img">
+              <div class="desc">
+                <b>Catamarans in the Caribbeans</b>
+                San Barth, Caribbeans
+              </div>
+            </div>
+            <div class="content">
+              Dear William,
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias vel eos dolor soluta quia neque minima at assumenda nam ut! Unde provident facilis omnis quo reprehenderit suscipit consequuntur sapiente impedit!
+            </div>
+          </div>
+
+
+          <div class="message reply">
+
+            <img src="/img/user.jpg" alt="" class="user-img">
+
+            <div class="header">
+              <div class="user-info">
+                <span class="date">Feb 20, 2014</span> <span class="from">You</span>
+              </div>
+              <span class="subject">Re: Booking Information</span>
+            </div>
+            <div class="loc">
+              <img src="/img/boat.jpg" alt="" class="loc-img">
+              <div class="desc">
+                <b>Catamarans in the Caribbeans</b>
+                San Barth, Caribbeans
+              </div>
+            </div>
+            <div class="content">
+              Dear William,
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias vel eos dolor soluta quia neque minima at assumenda nam ut! Unde provident facilis omnis quo reprehenderit suscipit consequuntur sapiente impedit!
+            </div>
+          </div>
+
+        </div>
+
+        <div class="message">
+            <img src="/img/user.jpg" alt="" class="user-img">
+            <div class="header">
+              <span class="subject">Re: Booking Information</span>
+              <div class="user-info">
+                <span class="date">Feb 20, 2014</span> <span class="from">You (Automatic)</span>
+              </div>
+            </div>
+            <div class="loc">
+              <img src="/img/boat.jpg" alt="" class="loc-img">
+              <div class="desc">
+                <b>Catamarans in the Caribbeans</b>
+                San Barth, Caribbeans
+              </div>
+            </div>
+            <div class="content">
+              <div class="alert-box">
+                <i class="icon-check"></i>
+                <span>Congratulation! Your experience has been booked</span>
+              </div>
+              Dear William,
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias vel eos dolor soluta quia neque minima at assumenda nam ut! Unde provident facilis omnis quo reprehenderit suscipit consequuntur sapiente impedit!
+              <br><br>
+              <b>You should have received your booking ticket with all the detailed information at your email address, but is also available here:</b>
+
+              <div class="ticket">
+                <i class="icon-logo"></i><br>
+                <div class="title">Boarding Ticket</div>
+                <div class="block">
+                  <div class="yellow">View</div>
+                  <div class="r">
+                    <div class="c">
+                      <a href="">Print</a>
+                    </div>
+                    <div class="c">
+                      <a href="">Download</a>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+
+
+      </div>
+
+    </div>
+    
+  </div>
+</div>

@@ -10,7 +10,8 @@ var source = {
 	coffee: ['public/coffee/**/*.coffee'],
 	template: ['public/template/**/*.html'],
 	img: ['public/img/**/*.jpg'],
-	fonts: ['public/fonts/**/**']
+	fonts: ['public/fonts/**/**'],
+	icons: ['public/svg/**/*.svg']
 };
 
 var dest = {
@@ -136,6 +137,25 @@ gulp.task('cssfix', function () {
 			}))
 			.pipe(gulp.dest('public/components'));
 });
+
+gulp.task('icons', function () {
+	var fontname = "iconfont";
+
+	return gulp.src(source.icons)
+		.pipe($.iconfontCss({
+			fontName: fontname,
+			path: "./public/sass/_icontmpl.scss",
+			targetPath: "../sass/site/_iconfont.scss",
+			fontPath: "/fonts/"
+		}))
+		.pipe($.iconfont({
+			fontName: fontname,
+			normalize: true
+		}))
+		.pipe(gulp.dest("public/fonts"));
+
+});
+
 
 
 gulp.task('watch', function () {

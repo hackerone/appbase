@@ -1,0 +1,213 @@
+@font-face {
+  font-family: "iconfont";
+  src: url('/fonts/iconfont.eot');
+  src: url('/fonts/iconfont.eot?#iefix') format('eot'),
+    url('/fonts/iconfont.woff') format('woff'),
+    url('/fonts/iconfont.ttf') format('truetype'),
+    url('/fonts/iconfont.svg#iconfont') format('svg');
+}
+
+@font-face {
+  font-family: "iconfont-svg";
+  src: url('/fonts/iconfont.svg#iconfont') format('svg');
+}
+%icon {
+  font-family: "iconfont-svg", "iconfont";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  // speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+  text-decoration: none;
+  text-transform: none;
+}
+
+@function icon-char($filename) {
+  $char: "";
+
+  @if $filename == anchor {
+    $char: "\E001";
+  }
+  @if $filename == bed {
+    $char: "\E002";
+  }
+  @if $filename == calendar {
+    $char: "\E003";
+  }
+  @if $filename == check {
+    $char: "\E004";
+  }
+  @if $filename == comment {
+    $char: "\E005";
+  }
+  @if $filename == expand {
+    $char: "\E006";
+  }
+  @if $filename == fb {
+    $char: "\E007";
+  }
+  @if $filename == food {
+    $char: "\E008";
+  }
+  @if $filename == fuel {
+    $char: "\E009";
+  }
+  @if $filename == gp {
+    $char: "\E00A";
+  }
+  @if $filename == heart {
+    $char: "\E00B";
+  }
+  @if $filename == info {
+    $char: "\E00C";
+  }
+  @if $filename == length {
+    $char: "\E00D";
+  }
+  @if $filename == like {
+    $char: "\E00E";
+  }
+  @if $filename == location {
+    $char: "\E00F";
+  }
+  @if $filename == logo {
+    $char: "\E010";
+  }
+  @if $filename == motorboat {
+    $char: "\E011";
+  }
+  @if $filename == nav-down {
+    $char: "\E012";
+  }
+  @if $filename == nav-left {
+    $char: "\E013";
+  }
+  @if $filename == nav-right {
+    $char: "\E014";
+  }
+  @if $filename == nav-up {
+    $char: "\E015";
+  }
+  @if $filename == person {
+    $char: "\E016";
+  }
+  @if $filename == sailboat {
+    $char: "\E017";
+  }
+  @if $filename == search {
+    $char: "\E018";
+  }
+  @if $filename == star-half {
+    $char: "\E019";
+  }
+  @if $filename == star-loc {
+    $char: "\E01A";
+  }
+  @if $filename == star {
+    $char: "\E01B";
+  }
+  @if $filename == tw {
+    $char: "\E01C";
+  }
+  @if $filename == up-arrow {
+    $char: "\E01D";
+  }
+
+  @return $char;
+}
+
+@mixin icon($filename, $insert: before) {
+  &:#{$insert} {
+    @extend %icon;
+    content: icon-char($filename);
+  }
+}
+
+.icon-anchor {
+  @include icon(anchor);
+}
+.icon-bed {
+  @include icon(bed);
+}
+.icon-calendar {
+  @include icon(calendar);
+}
+.icon-check {
+  @include icon(check);
+}
+.icon-comment {
+  @include icon(comment);
+}
+.icon-expand {
+  @include icon(expand);
+}
+.icon-fb {
+  @include icon(fb);
+}
+.icon-food {
+  @include icon(food);
+}
+.icon-fuel {
+  @include icon(fuel);
+}
+.icon-gp {
+  @include icon(gp);
+}
+.icon-heart {
+  @include icon(heart);
+}
+.icon-info {
+  @include icon(info);
+}
+.icon-length {
+  @include icon(length);
+}
+.icon-like {
+  @include icon(like);
+}
+.icon-location {
+  @include icon(location);
+}
+.icon-logo {
+  @include icon(logo);
+}
+.icon-motorboat {
+  @include icon(motorboat);
+}
+.icon-nav-down {
+  @include icon(nav-down);
+}
+.icon-nav-left {
+  @include icon(nav-left);
+}
+.icon-nav-right {
+  @include icon(nav-right);
+}
+.icon-nav-up {
+  @include icon(nav-up);
+}
+.icon-person {
+  @include icon(person);
+}
+.icon-sailboat {
+  @include icon(sailboat);
+}
+.icon-search {
+  @include icon(search);
+}
+.icon-star-half {
+  @include icon(star-half);
+}
+.icon-star-loc {
+  @include icon(star-loc);
+}
+.icon-star {
+  @include icon(star);
+}
+.icon-tw {
+  @include icon(tw);
+}
+.icon-up-arrow {
+  @include icon(up-arrow);
+}

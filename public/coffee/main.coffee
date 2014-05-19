@@ -28,3 +28,4 @@ require ["backbone", "skrollr", "routes/app" , "selectize"], (Backbone, skrollr,
 
   Backbone.history.start
     pushState : true
+    

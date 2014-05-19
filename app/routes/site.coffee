@@ -6,3 +6,6 @@ module.exports = (app) ->
 
   app.get '/listing', (req, res, next) ->
     res.render 'site/listing'
+
+  app.get '/dashboard', (req, res, next) ->
+    res.render 'site/dashboard'

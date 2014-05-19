@@ -1,0 +1,46 @@
+.dash-sidebar{
+  min-width: $dash-sb-width;
+  max-width: $dash-sb-width;
+  background: white;
+  padding: $dash-pad;
+  .search-box{
+    width: 100%;
+    padding: 10px;
+    background: #EEE;
+    border: 0;
+  }
+
+  .users-list{
+    list-style: none;
+    padding: 10px 0 50px 0; margin: 0;
+    li{
+      border-bottom: 1px solid rgba(black, 0.2);
+      a{
+        padding: 10px 5px;
+        display: block;
+        &.active{
+          border-left: 10px solid $yellow;
+          background: $blue;
+          color: white;
+        }
+        img{
+          padding: 0 5px;
+        }
+      }
+    }
+  }
+
+  section{
+    &.wide{
+      border-top: 5px solid $dash-bg;
+      margin:{
+        left: -10px; right: -10px;
+      }
+    }
+    a.link{
+      display: block;
+      padding: 10px 20px;
+      border-bottom: 5px solid $dash-bg;
+    }
+  }
+}

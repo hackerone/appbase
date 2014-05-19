@@ -17,16 +17,16 @@
         </p>
       </div>
       <div class="tools-col">
-        <a href=""><i class="icon-font icon-heart"></i></a>
-        <a href=""><i class="icon-font icon-comments"></i> 12</a>
+        <a href=""> Add to wishlist <i class="icon-font icon-heart"></i></a>
+        <a href=""> 12 <i class="icon-font icon-comment"></i></a>
       </div>
     </div>
     <div class="row">
       <div class="social-col">
         <ul class="social-icons-list">
-          <li><a href=""><i class="icon-font icon-tw"></i></a></li>
-          <li><a href=""><i class="icon-font icon-fb"></i></a></li>
-          <li><a href=""><i class="icon-font icon-gp"></i></a></li>
+          <li><a href=""><i class="icon-tw"></i></a></li>
+          <li><a href=""><i class="icon-fb"></i></a></li>
+          <li><a href=""><i class="icon-gp"></i></a></li>
         </ul>
       </div>
       <div class="booking-details-heading">
@@ -35,38 +35,45 @@
     </div>
     <div class="row">
       <div class="listing-gallery">
-        <div class="heading">
-          <a data-target=".gallery" class="active">Gallery</a>
-          <a data-target=".calendar">Calendar</a>
+        <div class="heading"> 
+          <ul class="nav-tabs">
+            <li class="active"><a href="#gallery-box">Gallery</a></li>
+            <li><a href="#calendar-box">Calendar</a></li>
+            <li><a href="#map-box">Map</a></li>
+          </ul>
         </div>
-        <div class="gallery active">
-          <div class="swipe" id="gallery">
-            <div class="swipe-wrap">
-              <div class="swipe-slide"><img src="/img/boat-v-1.jpg" data-thumb="/img/boat-t-1.jpg" alt="" class="swipe-img"></div>
-              <div class="swipe-slide"><img src="/img/boat-v-2.jpg" data-thumb="/img/boat-t-2.jpg" alt="" class="swipe-img"></div>
-              <div class="swipe-slide"><img src="/img/boat-v-3.jpg" data-thumb="/img/boat-t-3.jpg" alt="" class="swipe-img"></div>
-              <div class="swipe-slide"><img src="/img/boat-v-4.jpg" data-thumb="/img/boat-t-4.jpg" alt="" class="swipe-img"></div>
-              <div class="swipe-slide"><img src="/img/boat-v-5.jpg" data-thumb="/img/boat-t-5.jpg" alt="" class="swipe-img"></div>
-              <div class="swipe-slide"><img src="/img/boat-v-6.jpg" data-thumb="/img/boat-t-6.jpg" alt="" class="swipe-img"></div>
-              <div class="swipe-slide"><img src="/img/boat-v-7.jpg" data-thumb="/img/boat-t-7.jpg" alt="" class="swipe-img"></div>
-              <div class="swipe-slide"><img src="/img/boat-v-8.jpg" data-thumb="/img/boat-t-8.jpg" alt="" class="swipe-img"></div>
-              <div class="swipe-slide"><img src="/img/boat-v-9.jpg" data-thumb="/img/boat-t-9.jpg" alt="" class="swipe-img"></div>
-              
-              
+        <div class="tab-content">
+          <div class="gallery tab-pane active" id="gallery-box">
+            <a href="" class="expand-btn"><i class="icon-expand"></i></a>
+            <div class="swipe" id="gallery">
+              <div class="swipe-wrap">
+                <div class="swipe-slide"><img src="/img/boat-v-1.jpg" data-thumb="/img/boat-t-1.jpg" alt="" class="swipe-img"></div>
+                <div class="swipe-slide"><img src="/img/boat-v-2.jpg" data-thumb="/img/boat-t-2.jpg" alt="" class="swipe-img"></div>
+                <div class="swipe-slide"><img src="/img/boat-v-3.jpg" data-thumb="/img/boat-t-3.jpg" alt="" class="swipe-img"></div>
+                <div class="swipe-slide"><img src="/img/boat-v-4.jpg" data-thumb="/img/boat-t-4.jpg" alt="" class="swipe-img"></div>
+                <div class="swipe-slide"><img src="/img/boat-v-5.jpg" data-thumb="/img/boat-t-5.jpg" alt="" class="swipe-img"></div>
+                <div class="swipe-slide"><img src="/img/boat-v-6.jpg" data-thumb="/img/boat-t-6.jpg" alt="" class="swipe-img"></div>
+                <div class="swipe-slide"><img src="/img/boat-v-7.jpg" data-thumb="/img/boat-t-7.jpg" alt="" class="swipe-img"></div>
+                <div class="swipe-slide"><img src="/img/boat-v-8.jpg" data-thumb="/img/boat-t-8.jpg" alt="" class="swipe-img"></div>
+                <div class="swipe-slide"><img src="/img/boat-v-9.jpg" data-thumb="/img/boat-t-9.jpg" alt="" class="swipe-img"></div>
+                
+                
+              </div>
             </div>
-          </div>
 
-          <div class="swipe-control">
-            <a href="" class="prev"></a>
-            <div class="swipe swipe-thumb" id="swipe-thumb">
+            <div class="swipe-control">
+              <a href="" class="prev"></a>
+              <div class="swipe swipe-thumb" id="swipe-thumb">
 
+              </div>
+              <a href="" class="next"></a>
             </div>
-            <a href="" class="next"></a>
+            
           </div>
-          
-        </div>
-        <div class="calendar">
-          
+          <div class="tab-pane calendar-pane" id="calendar-box"></div>
+          <div class="map-pane tab-pane" id="map-box">
+            <div class="map"><iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDAe0CJ9tkGVBSnbmdUMDZkIBj8ix_xnoM&q=solanto, palermo,sicily,italy&zoom=8" frameborder="0" class="map-frame"></iframe></div>
+          </div>
         </div>
       </div>
       <div class="sidebar">
@@ -88,7 +95,7 @@
                 </div>
               </div>
             </div>
-            <div class="form-group">
+            <div class="form-group min-stay">
               Minimum stay: <b>4 days</b>
             </div>
             <div class="form-group inline">
@@ -188,16 +195,17 @@
           <div class="tab-wrap">
             <ul class="tabs nav nav-tabs">
               <li class="active"><a href="#description">Description</a></li>
-              <li><a href="#boat">Boat and rules</a></li>
-              <li><a href="#itineraries">Itineraries</a></li>
-              <li><a href="#map">Map</a></li>
+              <li><a href="#boat">Boat and Amenities</a></li>
+              <li><a href="#rules">Rules</a></li>
             </ul>
             <div class="tab-content">
               <div id="description" class="tab-pane active">
                 <h3>Overview</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, necessitatibus esse nulla id omnis corrupti quis? Eos, aliquid excepturi corporis similique sed enim porro iste! Ut tenetur iusto ea repudiandae!</p>
-                <h3>Activities</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate quis maiores provident veniam facere perferendis eos rerum? Error, nemo, dolorem, molestias quaerat ipsum veniam labore deserunt laborum sunt quasi doloribus.</p>
+                <p>Our sailing catamaran is located in the middle of the Caribbean. We organize charters and sailing holidays mostly around the beautiful and still unspoiled Windward Islands. If you are looking for a unique opportunity to discover more of the world, this can be perfect for you! You can hire our boat with up to 6 people and tell us where you wish to go. It can be for one night or for several weeks. Even if you are thinking of an original way of traveling around the world during a longer sabbatical, let us know. We are not necessarily fixed to a certain place, so everything can be discussed. 
+                  <br><br>
+The boat is a fast and luxury catamaran with four spacious and airy huts. The beds are comfortable, you will have your own cupboard for your belongings and a little couch where you can sit. Two huts have queen size beds and the other two have double beds. There are two toilets with showers for the guests. Our favorite shower, however, is outside where you can rinse of the salt water straight after swimming, snorkeling or diving. Because of the numerous hatches in the boat, it is always airy and cool inside without the necessity of an airco. Additional we have a kayak, surfboard, snorkeling- and diving equipment you can use. 
+<br><br>
+Sailing on a catamaran is a lot more comfortable than on a mono hull. The movements are less intense and people tend to adapt to these movements more easily. We will make sure you will enjoy your stay by sailing you safely from one place to the other, cooking nice meals (vegetarian or not) and serving delicious cocktails! </p>
 
                 <div class="feature-wrap">
                   <div class="feature-item">
@@ -235,7 +243,7 @@
                   <div class="feature-item">
                     <label for="">Max Guests</label>
                     <div class="text">8</div>
-                  </div>
+                  </div> 
                   <div class="feature-item">
                     <label for="">Max Guests</label>
                     <div class="text">8</div>
@@ -260,17 +268,46 @@
                 <!-- feature wrap -->
               </div>
               <div class="tab-pane" id="boat">
-                <h3>Boat and rules</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, eligendi voluptates error omnis culpa incidunt asperiores velit cupiditate ullam hic perspiciatis nemo distinctio commodi tempora provident harum vitae eveniet iste!</p>
+                <h3 class="boat-name">Elizabeth <br><small>Lagoon 450, 2010</small></h3>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <b>Catamaran sailboat, fiberglass <br>length 45.1’, beam 25.9’, draft 4.3’. </b>
+                  </div>
+                  <div class="col-sm-6">Max speed: 25 Kts, cruising speed 18 Kts 
+Engine: 2x40Hp</div>
+                </div>
+                <div class="grey-box">
+                  <ul class="amenities-list">
+                    <li class="active">Beds <a href="#" title="Beds"><i class="icon-info"></i></a></li>
+                    <li class="active">Cabin <a href="#" title="Cabin"><i class="icon-info"></i></a></li>
+                    <li class="active">WC</li>
+                    <li>Smoking allowed</li>
+                    <li class="active">Kids friendly  <a href="#" title="Kids friendly"><i class="icon-info"></i></a></li>
+                    <li class="active">Pets allowed</li>
+                    <li class="active">Power sockets</li>
+                    <li>Wi-Fi</li>
+                    <li class="active">Audio System  </li>
+                    <li class="active">TV </li>
+                    <li class="active">Air conditioning</li>
+                    <li class="active">Heating</li>
+                    <li class="active">Disable friendly</li>
+                    <li>Kitchen</li>
+                    <li class="active">Fridge</li>
+                    <li>Bimini top</li>
+                    <li>Tender</li>
+                  </ul>
+                </div>
               </div>
-              <div class="tab-pane" id="itineraries">
-                <h3>Itineraries</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi dolorem tempora iste rem odio rerum provident voluptatibus doloribus. Corporis, rerum quam ratione numquam aut eaque aperiam dolor dolorem sequi autem?</p>
-              </div>
-
-              <div class="tab-pane" id="map">
-                <h3>Map</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, unde, illum labore est delectus minima ipsum soluta mollitia! Eaque ipsa sint atque vel cum veritatis blanditiis quod culpa rem possimus.</p>
+              <div class="tab-pane rules-pane" id="rules">
+                <h3>Rules on board</h3>
+                <p>We are willing to have a well-educated and responsible hosts. We believe that it is important to keep in mind the following: 
+<ul>
+<li> The check-in and check-out timetable is flexible, but if there is a new guest </li>checking in the same day of your departure, your check-out must be done in the morning at 12 a.m and the next check-in at 2 p.m . 
+<li> Try to keep the boat tidy and clean. </li>
+<li> Smoking is not allowed inside the boat.</li>
+<li> No pets. </li>
+</ul>
+</p>
               </div>
 
             </div>
@@ -280,25 +317,31 @@
           <div class="ratings">
             <div class="overall">
               <h3>Overall Rating</h3>
-              <div class="rating star-4"></div>
+              <div class="rating star-4">
+                <div class="star blue"></div>
+                <div class="star blue"></div>
+                <div class="star blue"></div>
+                <div class="star blue"></div>
+                <div class="star"></div>
+              </div>
             </div>
             <div class="score-wrap">
-              <score-item>
+              <div class="score-item">
                 <label for="">Location</label>
-                <div class="score score-4"></div>
-              </score-item>
-              <score-item>
+                <div class="score score-3"></div>
+              </div>
+              <div class="score-item">
                 <label for="">Location</label>
-                <div class="score score-4"></div>
-              </score-item>
-              <score-item>
+                <div class="score score-2"></div>
+              </div>
+              <div class="score-item">
                 <label for="">Location</label>
-                <div class="score score-4"></div>
-              </score-item>
-              <score-item>
+                <div class="score score-1"></div>
+              </div>
+              <div class="score-item">
                 <label for="">Location</label>
-                <div class="score score-4"></div>
-              </score-item>
+                <div class="score score-5"></div>
+              </div>
             </div>
           </div>
 
